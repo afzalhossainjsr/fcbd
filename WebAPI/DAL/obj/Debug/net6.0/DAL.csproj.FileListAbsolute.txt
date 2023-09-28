@@ -1,0 +1,15 @@
+D:\WorkStation\WebAPI\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\WorkStation\WebAPI\DAL\bin\Debug\net6.0\DAL.dll
+D:\WorkStation\WebAPI\DAL\bin\Debug\net6.0\ref\DAL.dll
+D:\WorkStation\WebAPI\DAL\bin\Debug\net6.0\DAL.pdb
+D:\WorkStation\WebAPI\DAL\bin\Debug\net6.0\Model.dll
+D:\WorkStation\WebAPI\DAL\bin\Debug\net6.0\Model.pdb
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.dll
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\WorkStation\WebAPI\DAL\obj\Debug\net6.0\DAL.pdb

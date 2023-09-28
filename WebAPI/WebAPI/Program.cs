@@ -1,6 +1,7 @@
 using DinkToPdf;
 using DinkToPdf.Contracts;
 using Microsoft.Extensions.FileProviders;
+using WebAPI.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 builder.Services.AddCors();
+builder.Services.AddSignalR();
 
 
 var app = builder.Build();
@@ -39,6 +41,7 @@ app.UseStaticFiles(new StaticFileOptions
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers(); // Map your API controllers here.
+    endpoints.MapHub<NotificationHubs>("/notification");
 });
 
 app.Run();
