@@ -537,18 +537,6 @@ namespace DAL.Common
         public string? Password { get; set; }
 
 
-        public string? NoreplyFrom { get; set; }
-        public string? NoreplySmtpServer { get; set; }
-        public int NoreplyPort { get; set; }
-        public string? NoreplyUserName { get; set; }
-        public string? NoreplyPassword { get; set; }
-
-
-        public string? UpdateFrom { get; set; }
-        public string? UpdateSmtpServer { get; set; }
-        public int UpdatePort { get; set; }
-        public string? UpdateUserName { get; set; }
-        public string? UpdatePassword { get; set; }
 
 
         public string? message_username { get; set; }

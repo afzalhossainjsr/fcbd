@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish\webAPI</_PublishTargetUrl>
+    <History>True|2023-09-29T02:57:44.5239254Z;True|2023-09-29T08:44:17.9590001+06:00;False|2023-09-29T08:43:46.7720543+06:00;True|2023-09-29T08:40:38.2462395+06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=.%3bDatabase=UserDB%3bTrusted_Connection=True%3bMultipleActiveResultSets=true%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
