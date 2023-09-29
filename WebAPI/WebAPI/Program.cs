@@ -1,6 +1,8 @@
 using System.Text;
 using DAL.Common;
+using DAL.Repository.Auth;
 using DAL.Repository.Hubs;
+using DAL.Services.Auth;
 using DAL.Services.Hubs;
 using DinkToPdf;
 using DinkToPdf.Contracts;
@@ -95,6 +97,7 @@ builder.Host.ConfigureServices(services =>
 {
     services.AddScoped<IDataManager, DataManager>();
     services.AddScoped<IConnectedUserDAL, ConnectedUserDAL>();
+    services.AddScoped<IUserRegisterDAL, UserRegisterDAL>();
 });
 
 //app configurations
@@ -121,6 +124,10 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory()))
 });
 
+
+
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers(); 

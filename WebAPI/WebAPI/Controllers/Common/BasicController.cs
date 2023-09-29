@@ -1,6 +1,9 @@
 ﻿using System.Data;
+using Facebook;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using WebAPI.Auth;
 using WebAPI.Common;
 
 namespace WebAPI.Controllers.Common
@@ -130,6 +133,28 @@ tfoot {
             var title = "Daily Product Order";
             var secondTitle = "1 January, 2023";
             return ExcelGenerator.GenerateExcel01(table, title, secondTitle);
+        }
+        private FacebookUserInfo GetFaceBookUser(string _accessToken) 
+        {
+            FacebookUserInfo userinfo = new FacebookUserInfo();
+            var client = new FacebookClient(_accessToken);
+            try
+            {
+                var result = client.Get("/me?fields=id,email");
+                var responseObj = JObject.Parse(result?.ToString());
+                userinfo = new FacebookUserInfo()
+                {
+                    Id = responseObj["id"]?.ToString(),
+                    Email = responseObj["email"]?.ToString()
+                };
+            }
+            catch (Exception ex)
+            {
+                userinfo.Email = ex.Message.ToString();
+                return userinfo;
+            }
+
+            return userinfo;
         }
     }
 }

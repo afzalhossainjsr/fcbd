@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Rx+crlCszvhRaFwIEU55spfBqDUnzw+wU3INBZytJB+D8nrJSTUodHXei+0+wlM8r/G/hRb5fzaqG0037VpShA==",
+  "dgSpecHash": "71ITDLwZnZHbYkTWr3tiaCFe7xNQqHcek89PqEEQBBaF4rJdkjEsC/RVpSKFL0+JNmXfp9HmhKDvVrnjNSsfMA==",
   "success": true,
   "projectFilePath": "D:\\WorkStation\\WebAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,10 @@
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\dinktopdf\\1.0.8\\dinktopdf.1.0.8.nupkg.sha512",
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
+    "C:\\Users\\GADGET BD 71\\.nuget\\packages\\facebook\\7.0.6\\facebook.7.0.6.nupkg.sha512",
+    "C:\\Users\\GADGET BD 71\\.nuget\\packages\\google.apis\\1.62.1\\google.apis.1.62.1.nupkg.sha512",
+    "C:\\Users\\GADGET BD 71\\.nuget\\packages\\google.apis.auth\\1.62.1\\google.apis.auth.1.62.1.nupkg.sha512",
+    "C:\\Users\\GADGET BD 71\\.nuget\\packages\\google.apis.core\\1.62.1\\google.apis.core.1.62.1.nupkg.sha512",
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\irony.netcore\\1.0.11\\irony.netcore.1.0.11.nupkg.sha512",
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -204,5 +208,16 @@
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\GADGET BD 71\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Facebook 7.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Facebook",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Auth\" />
     <Folder Include="Files\Images\News\" />
     <Folder Include="Files\Images\Player\" />
     <Folder Include="Files\Images\User\" />
@@ -17,7 +16,10 @@
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.102.1" />
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.2" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.62.1" />
+	  <PackageReference Include="Facebook" Version="7.0.6" />
+
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.2" />

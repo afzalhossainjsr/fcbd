@@ -1,7 +1,7 @@
 ﻿
 installation Packages
 --------------------
-1. Install-Package -Version 6.5.0
+1. dotnet tool install --global Swashbuckle.AspNetCore.Cli --version 6.5.0
 2. Install-Package DinkToPdf
 3. Install-Package ClosedXML
 4. Install-Package Microsoft.AspNetCore.SignalR
@@ -13,6 +13,8 @@ installation Packages
 8.Microsoft.AspNetCore.Authentication.JwtBearer
 9. Install-Package SixLabors.ImageSharp
 10. Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 6.0.2
+11. Install-Package Google.Apis.Auth
+
 
 
 Migration Command :

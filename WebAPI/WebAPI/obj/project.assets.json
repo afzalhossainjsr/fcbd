@@ -95,6 +95,54 @@
           "lib/netstandard2.0/ExcelNumberFormat.dll": {}
         }
       },
+      "Facebook/7.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Facebook.dll": {}
+        }
+      },
+      "Google.Apis/1.62.1": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.62.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.62.1": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.62.1",
+          "Google.Apis.Core": "1.62.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.62.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -3081,6 +3129,112 @@
         "lib/netstandard1.0/ExcelNumberFormat.xml",
         "lib/netstandard2.0/ExcelNumberFormat.dll",
         "lib/netstandard2.0/ExcelNumberFormat.xml"
+      ]
+    },
+    "Facebook/7.0.6": {
+      "sha512": "D9nlWZb88S4U+eh1pUDQ+AkSkiht6m0eFpxKFddZnQSSFTnncvDMBEnNODy4fOIOjWQIiOXRVbuY04jCPyWqkw==",
+      "type": "package",
+      "path": "facebook/7.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "facebook.7.0.6.nupkg.sha512",
+        "facebook.nuspec",
+        "lib/net35-client/Facebook.dll",
+        "lib/net35-client/Facebook.xml",
+        "lib/net40-client/Facebook.dll",
+        "lib/net40-client/Facebook.xml",
+        "lib/net45/Facebook.dll",
+        "lib/net45/Facebook.xml",
+        "lib/portable-win81+wpa81/Facebook.dll",
+        "lib/portable-win81+wpa81/Facebook.xml",
+        "lib/sl5/Facebook.dll",
+        "lib/sl5/Facebook.xml",
+        "lib/win8/Facebook.dll",
+        "lib/win8/Facebook.xml",
+        "lib/wp71/Facebook.dll",
+        "lib/wp71/Facebook.xml",
+        "lib/wp8/Facebook.dll",
+        "lib/wp8/Facebook.xml",
+        "lib/wp81/Facebook.dll",
+        "lib/wp81/Facebook.xml",
+        "readme.txt",
+        "serializers/JsonNetSerializer.cs"
+      ]
+    },
+    "Google.Apis/1.62.1": {
+      "sha512": "gfCyrCkJkxin/CTtxZN6quHQ4jF+JudHOcZoYsJgyROu8cEijTx1rf+JZW2/Z/Tl6F6Paxuq6JKZi5rijIni8A==",
+      "type": "package",
+      "path": "google.apis/1.62.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.62.1.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.62.1": {
+      "sha512": "QXDes67ZURNIop9l/YVc0vP6lRAzwKOrKI4DrGQgG0mgyQle0xJm2CsJ/izpB/XJqOVrLQiCkopFEuKs7Cnstw==",
+      "type": "package",
+      "path": "google.apis.auth/1.62.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.auth.1.62.1.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/net461/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net461/Google.Apis.Auth.dll",
+        "lib/net461/Google.Apis.Auth.pdb",
+        "lib/net461/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Core/1.62.1": {
+      "sha512": "pW+nxHMDjmr8wVy4vA1EqA3fZ+ZNAr25u1cT45aYFzHg4KmaXhIOoscB2F8ZwtnHIqTo387ZeQfGQomNLi4pFA==",
+      "type": "package",
+      "path": "google.apis.core/1.62.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.62.1.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -9393,6 +9547,8 @@
       "ClosedXML >= 0.102.1",
       "DAL >= 1.0.0",
       "DinkToPdf >= 1.0.8",
+      "Facebook >= 7.0.6",
+      "Google.Apis.Auth >= 1.62.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.2",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.0",
@@ -9459,6 +9615,14 @@
             "target": "Package",
             "version": "[1.0.8, )"
           },
+          "Facebook": {
+            "target": "Package",
+            "version": "[7.0.6, )"
+          },
+          "Google.Apis.Auth": {
+            "target": "Package",
+            "version": "[1.62.1, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.2, )"
@@ -9519,5 +9683,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Facebook 7.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Facebook",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
