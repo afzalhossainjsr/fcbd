@@ -2,6 +2,7 @@
 using Facebook;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Model.Auth;
 using Newtonsoft.Json.Linq;
 using WebAPI.Auth;
 using WebAPI.Common;

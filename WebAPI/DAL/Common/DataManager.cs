@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Model.Auth;
 using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;

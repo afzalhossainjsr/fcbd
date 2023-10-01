@@ -59,7 +59,7 @@ namespace DAL.Services.Auth
             parameterList.Add(new SqlParameter("@Email", obj.Email));
             parameterList.Add(new SqlParameter("@MobileNumber", obj.MobileNumber));
             SqlParameter[] parameters = parameterList.ToArray();
-            var list = await _dataManager.ReturnListBySP2<AspNetUsersSocialUserReferenceViewModel>("EasyesseUserDB.dbo.spGetAspNetUsersSocialUserReference", parameters);
+            var list = await _dataManager.ReturnListBySP2<AspNetUsersSocialUserReferenceViewModel>("UserDB.dbo.spGetAspNetUsersSocialUserReference", parameters);
             if (list.Count > 0)
             {
                 Info = list[0];
@@ -77,7 +77,7 @@ namespace DAL.Services.Auth
             parameterList.Add(new SqlParameter("@ErrNo", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
             SqlParameter[] parameters = parameterList.ToArray();
 
-            objResult = await _dataManager.SaveDataBySP(@"EasyesseUserDB.dbo.spSetAspNetUserResetPasswordToken", parameters);
+            objResult = await _dataManager.SaveDataBySP(@"UserDB.dbo.spSetAspNetUserResetPasswordToken", parameters);
             return (objResult);
         }
         public async Task<ForgotPasswordToken> GetForgotPasswordToken(ResetPasswordModel model)
@@ -87,7 +87,7 @@ namespace DAL.Services.Auth
             parameterList.Add(new SqlParameter("@PhoneNumber", model.PhoneNumber));
             parameterList.Add(new SqlParameter("@Token", model.Token));
             SqlParameter[] parameters = parameterList.ToArray();
-            var list = await _dataManager.ReturnListBySP<ForgotPasswordToken>("EasyesseUserDB.dbo.spGetAspNetUserResetPasswordToken", parameters);
+            var list = await _dataManager.ReturnListBySP<ForgotPasswordToken>("UserDB.dbo.spGetAspNetUserResetPasswordToken", parameters);
             var data = list[0];
             return data;
         }

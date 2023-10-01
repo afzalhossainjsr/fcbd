@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using Model.Auth;
 using Newtonsoft.Json.Serialization;
 using WebAPI.Auth;
 using WebAPI.Hubs;

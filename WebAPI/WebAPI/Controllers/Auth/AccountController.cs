@@ -320,20 +320,7 @@ namespace WebAPI.Controllers.Auth
                 return "Exception Occured Ex:" + ex.Message.ToString();
             }
         }
-        private string GetUserIdFromFacebookIdToken(string? idToken)
-        {
-            try
-            {
-                var fb = new FacebookClient();
-                dynamic payload = fb.ParseSignedRequest("844edb50ec19d685632cae6a70375c5e", idToken);
-                return payload.user_id;
-
-            }
-            catch (Exception ex)
-            {
-                return "Exception Occured Ex:" + ex.Message.ToString();
-            }
-        }
+       
         private FacebookUserInfo GetFacebookUser(string? _accessToken)  
         {
             FacebookUserInfo userinfo = new FacebookUserInfo();
