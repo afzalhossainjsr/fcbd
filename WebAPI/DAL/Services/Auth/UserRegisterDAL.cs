@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Common;
 using DAL.Repository.Auth;
+using Model.Auth;
 
 namespace DAL.Services.Auth
 {
@@ -63,6 +65,31 @@ namespace DAL.Services.Auth
                 Info = list[0];
             }
             return (Info);
+        }
+        public async Task<ResultObject> SaveForgotPasswordToken(ForgotPasswordToken obj)
+        {
+            ResultObject objResult = new ResultObject();
+            List<SqlParameter> parameterList = new List<SqlParameter>();
+            parameterList.Add(new SqlParameter("@PhoneNumber", obj.PhoneNumber));
+            parameterList.Add(new SqlParameter("@PasswordToken", obj.PasswordToken));
+            parameterList.Add(new SqlParameter("@SMSToken", obj.SMSToken));
+            parameterList.Add(new SqlParameter("@IdentityValue", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
+            parameterList.Add(new SqlParameter("@ErrNo", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
+            SqlParameter[] parameters = parameterList.ToArray();
+
+            objResult = await _dataManager.SaveDataBySP(@"EasyesseUserDB.dbo.spSetAspNetUserResetPasswordToken", parameters);
+            return (objResult);
+        }
+        public async Task<ForgotPasswordToken> GetForgotPasswordToken(ResetPasswordModel model)
+        {
+            List<SqlParameter> parameterList = new List<SqlParameter>();
+            parameterList.Add(new SqlParameter("@LoadOption", 2));
+            parameterList.Add(new SqlParameter("@PhoneNumber", model.PhoneNumber));
+            parameterList.Add(new SqlParameter("@Token", model.Token));
+            SqlParameter[] parameters = parameterList.ToArray();
+            var list = await _dataManager.ReturnListBySP<ForgotPasswordToken>("EasyesseUserDB.dbo.spGetAspNetUserResetPasswordToken", parameters);
+            var data = list[0];
+            return data;
         }
     }
 }

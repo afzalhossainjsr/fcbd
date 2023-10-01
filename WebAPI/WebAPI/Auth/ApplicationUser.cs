@@ -22,36 +22,4 @@ namespace WebAPI.Auth
         }
 
     }
-    public class RegisterModel
-    {
-        public string? UserName { get; set; }
-        public string? Email { get; set; }
-        public string? Password { get; set; }
-        public string? first_name { get; set; }
-        public string? last_name { get; set; }
-        public string? PhoneNumber { get; set; }
-        public bool? IsSocialLogin { get; set; } = false;
-        public string? IdToken { get; set; }
-        public string? Provider { get; set; }
-
-    }
-    public class Response
-    {
-        public string? status { get; set; }
-        public string? message { get; set; }
-    }
-    public class FacebookUserInfo
-    {
-        public string? Id { get; set; }
-        public string? Email { get; set; }
-        public string? PhoneNumber { get; set; }
-    }
-    public class LoginModel
-    {
-        public string UserName { get; set; }
-        public string Password { get; set; }
-    }
-
-
-
 }

@@ -8,6 +8,7 @@ using Google.Apis.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Model.Auth;
 using Newtonsoft.Json.Linq;
 using WebAPI.Auth;
 
@@ -108,8 +109,6 @@ namespace WebAPI.Controllers.Auth
 
             return Ok(new { message = "password does not match", status = "201" });
         }
-
-
 
         [HttpPost]
         [Route("GetSocialReferenceStatus")]
@@ -264,10 +263,10 @@ namespace WebAPI.Controllers.Auth
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User OTP Failed!" }); 
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User OTP Failed!" }); 
                 }
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User Doesnot exist!" }); 
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User Doesnot exist!" }); 
         }
 
         [HttpGet("ConfirmPhoneNumber")]
@@ -281,17 +280,16 @@ namespace WebAPI.Controllers.Auth
                 {
                     return Ok(new
                     {
-                        
                         status = "200",
                         message = "Confirm Successfully!"
                     });
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User OTP Failed!" });
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User OTP Failed!" });
                 }
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User Doesnot exist!" });
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User Doesnot exist!" });
         }
 
         private JwtSecurityToken GetJWTToken(List<Claim> authClaims)  
@@ -370,7 +368,104 @@ namespace WebAPI.Controllers.Auth
             }
             return code;
         }
+        [HttpPost]
+        [Route("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordModel model)
+        {
+            OTPMessageResultModel messageResult = new OTPMessageResultModel() { message = "", statusCode = "" };
+            var user = await userManager.FindByNameAsync(model.UserName);
+            if (user == null)
+            {
+                return Ok(new
+                {
+                    message = "User not found.",
+                    status = "201"
+                });
+            }
+            var token = ReturnSMSToken();
+            var passwordtoken = await userManager.GeneratePasswordResetTokenAsync(user);
+            //Save Message To Database 
+            var forgotPasswordObj = new ForgotPasswordToken()
+            {
+                PhoneNumber = model.UserName,
+                PasswordToken = passwordtoken,
+                SMSToken = token
+            };
+            var saveResult = await _iUserRegisterDAL.SaveForgotPasswordToken(forgotPasswordObj);
 
+            if (int.Parse(saveResult?.ResultID) > 0)
+            {
+                messageResult = await _iUserRegisterDAL.SendOTPMessage(user.PhoneNumber, "Your Football Bangla code is:\n" + token);
+            }
+            else
+            {
+                return Ok(new
+                {
+                    Message = $"An Error Occured!",
+                    status = "201",
+                    Id = 0
+                });
+            }
+            if (messageResult.statusCode == "200")
+            {
+                return Ok(new
+                {
+                    Message = $"We have sent an OTP to your phonenumber {user.PhoneNumber}!",
+                    status = "200",
+                    Id = (int.Parse(token) - 999)
+                });
+            }
+            return Ok(new { status = messageResult.statusCode, Message = "Message Sending Failed!", Id = 0 });
+        }
+        [HttpPost]
+        [Route("ResetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordModel resetPasswordModel)
+        {
+            var result = await _iUserRegisterDAL.GetForgotPasswordToken(resetPasswordModel);
+            var user = await userManager.FindByNameAsync(result.PhoneNumber);
+            if (user == null)
+                return Ok(new
+                {
+                    message = "User not found.",
+                    status = "201"
+                });
+            var resetPassResult = await userManager.ResetPasswordAsync(user, result.PasswordToken, resetPasswordModel.Password);
+            if (!resetPassResult.Succeeded)
+            {
+                return Ok(new
+                {
+                    message = "Failed to reset password.",
+                    status = "201"
+                });
+            }
+            return Ok(new
+            {
+                message = "Successfully reset your password.",
+                status = "200"
+            });
+        }
+        [HttpPost]
+        [Route("ChangePassword")]
+        public async Task<IActionResult> ChangePasswortAsync(ChangePasswordModel model)
+        {
+            string claim = HttpContext.User.FindFirstValue(ClaimsIdentity.DefaultNameClaimType);
+            var user = await userManager.FindByNameAsync(claim);
+            var result = await userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+
+            if (!result.Succeeded)
+            {
+                return Ok(new Response
+                {
+                    message = "Change Passwor failed!",
+                    status = "201"
+                });
+            }
+            return Ok(new Response
+            {
+                message = "Change Passwor successfully!",
+                status = "200"
+            });
+        }
     }
 
 }
