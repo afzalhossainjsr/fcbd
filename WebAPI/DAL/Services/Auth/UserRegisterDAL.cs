@@ -91,5 +91,20 @@ namespace DAL.Services.Auth
             var data = list[0];
             return data;
         }
+        public async Task<AspNetSocialUserVerificationToken> GetSMSToken(SMSTokenModel obj)
+        {
+
+            AspNetSocialUserVerificationToken Info = new AspNetSocialUserVerificationToken();
+            List<SqlParameter> parameterList = new List<SqlParameter>();
+            parameterList.Add(new SqlParameter("@MobileNumber", obj.MobileNumber));
+            parameterList.Add(new SqlParameter("@SMSToken", obj.SMSToken));
+            SqlParameter[] parameters = parameterList.ToArray();
+            var list = await _dataManager.ReturnListBySP2<AspNetSocialUserVerificationToken>("UserDB.dbo.spSetAspNetUsersSocialUserMobileVerificationToken", parameters); 
+            if (list.Count > 0)
+            {
+                Info = list[0];
+            }
+            return (Info);
+        }
     }
 }

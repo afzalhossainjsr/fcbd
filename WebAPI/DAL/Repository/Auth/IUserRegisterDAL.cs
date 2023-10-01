@@ -11,6 +11,7 @@ namespace DAL.Repository.Auth
     public interface IUserRegisterDAL
     {
         Task<ForgotPasswordToken> GetForgotPasswordToken(ResetPasswordModel model);
+        Task<AspNetSocialUserVerificationToken> GetSMSToken(SMSTokenModel obj);
         Task<AspNetUsersSocialUserReferenceViewModel> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel obj);
         Task<UserRegistrationInfoModel> GetUserRegistrationInfo(string? UserName);
         Task<ResultObject> SaveForgotPasswordToken(ForgotPasswordToken obj);

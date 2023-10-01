@@ -453,6 +453,28 @@ namespace WebAPI.Controllers.Auth
                 status = "200"
             });
         }
+        [HttpGet]
+        [Route("GetSMSToken")]
+        public async Task<IActionResult> GetSMSToken(string MobileNumber)
+        {
+            AspNetSocialUserVerificationToken lst = new AspNetSocialUserVerificationToken();
+            SMSTokenModel obj = new SMSTokenModel() { MobileNumber = MobileNumber, SMSToken = ReturnSMSToken() };
+            var messageResult = await _iUserRegisterDAL.SendOTPMessage(MobileNumber,
+                "Your football Bangla OTP Code is:\n" + obj.SMSToken.ToString()); 
+            if (messageResult.statusCode == "200")
+            {
+                lst = await _iUserRegisterDAL.GetSMSToken(obj); 
+                lst.SMSToken = (lst.SMSToken);
+                lst.SMSStatus = "200";
+            }
+            else
+            {
+                lst.MobileNumber = MobileNumber;
+                lst.SMSStatus = messageResult.statusCode;
+            }
+
+            return new JsonResult(lst);
+        }
     }
 
 }

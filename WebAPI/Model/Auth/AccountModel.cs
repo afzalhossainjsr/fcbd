@@ -137,4 +137,17 @@ namespace Model.Auth
         public string UserName { get; set; }
         public string Url { get; set; }
     }
+    public class AspNetSocialUserVerificationToken 
+    {
+        public int? Id { get; set; }
+        public string? MobileNumber { get; set; }
+        public int? SMSToken { get; set; }
+        public string? CreatedAt { get; set; }
+        public string? SMSStatus { get; set; }
+    }
+    public class SMSTokenModel
+    {
+        public string? MobileNumber { get; set; }
+        public string? SMSToken { get; set; }
+    }
 }
