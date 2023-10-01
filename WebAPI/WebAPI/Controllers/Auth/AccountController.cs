@@ -218,8 +218,6 @@ namespace WebAPI.Controllers.Auth
         private async Task<dynamic> GetDynamicData(AspNetUsersSocialUserReferenceViewModel model)
         {
             var user = await userManager.FindByNameAsync(model.UserName);
-
-            var userinfo = await _iUserRegisterDAL.GetUserRegistrationInfo(model.UserName);
             var userRoles = await userManager.GetRolesAsync(user);
             var authClaims = new List<Claim>
                 {
@@ -236,7 +234,7 @@ namespace WebAPI.Controllers.Auth
 
             var data = new
             {
-                userinfo = userinfo,
+                userinfo = user, 
                 token = new JwtSecurityTokenHandler().WriteToken(token),
                 expiration = token.ValidTo,
                 status = "200",

@@ -20,35 +20,15 @@ namespace DAL.Services.Auth
 
             _dataManager = dataManager;
         }
-        private string getSP = @"spGetUserProfileSettings";
-        private string SetSp = @"spSetUserProfileSettings";
+       
+     
 
-        public int LoadAddressType = 1,
-                   LoadGender = 2,
-                   LoadCountry = 3,
-                   LoadUserRegistrationInfo = 4,
-                   LoadUserAddress = 5,
-                   LoadUserPaymentCardInfo = 6,
-                   LoadDeleteReasonParameter = 7;
         public async Task<OTPMessageResultModel> SendOTPMessage(string? phonenumber, string message)
         {
             var result = await _dataManager.SendSingleMessage(phonenumber, message);
             return result;
         }
-        public async Task<UserRegistrationInfoModel> GetUserRegistrationInfo(string? UserName) 
-        {
-            UserRegistrationInfoModel Info = new UserRegistrationInfoModel();
-            List<SqlParameter> parameterList = new List<SqlParameter>();
-            parameterList.Add(new SqlParameter("@LoadOption", LoadUserRegistrationInfo));
-            parameterList.Add(new SqlParameter("@UserName", UserName));
-            SqlParameter[] parameters = parameterList.ToArray();
-            var list = await _dataManager.ReturnListBySP2<UserRegistrationInfoModel>(getSP, parameters);
-            if (list.Count > 0)
-            {
-                Info = list[0];
-            }
-            return (Info);
-        }
+     
         public async Task<AspNetUsersSocialUserReferenceViewModel> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel obj)
         {
 
