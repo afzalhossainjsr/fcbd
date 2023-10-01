@@ -1,8 +1,14 @@
-﻿using DAL.Common;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using DAL.Common;
 using DAL.Repository.Auth;
-using Microsoft.AspNetCore.Http;
+using Facebook;
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using WebAPI.Auth;
 
 namespace WebAPI.Controllers.Auth
@@ -55,16 +61,314 @@ namespace WebAPI.Controllers.Auth
                 {
                     return Ok(new Response
                     {
-                        message = $"We have sent an verification code to your phone number {user.PhoneNumber}!",
+                        message = $"We have sent  verification code to your phone number {user.PhoneNumber}!",
                         status = "200"
                     });
                 }
 
-                return Ok(new Response { status = "Error", message = $"Error Status Code: {messageResult.statusCode}" });
+                return Ok(new Response { status = "201", message = $"Error Status Code: {messageResult.statusCode}" });
             }
 
             return StatusCode(StatusCodes.Status500InternalServerError,
-                new Response { status = "Error", message = "User creation failed! Please check user details and try again." });
+                new Response { status = "201", message = "User creation failed! Please check user details and try again." });
+        }
+
+        [HttpPost]
+        [Route("login-user")]
+        public async Task<IActionResult> LoginUser( LoginModel model)
+        {
+            var user = await userManager.FindByNameAsync(model.UserName);
+
+            if (user == null)
+                return Ok(new Response { message = "User not exists!", status = "201" });
+
+            if (await userManager.CheckPasswordAsync(user, model.Password))
+            {
+                var userinfo = await userManager.FindByNameAsync(model.UserName);  
+                var userRoles = await userManager.GetRolesAsync(user);
+                var authClaims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                };
+
+                authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
+
+                var token = GetJWTToken(authClaims);
+
+                return Ok(new
+                {
+                    userinfo,
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = token.ValidTo,
+                    status = "200",
+                    message = "Login Successfully!"
+                });
+            }
+
+            return Ok(new { message = "password does not match", status = "201" });
+        }
+
+
+
+        [HttpPost]
+        [Route("GetSocialReferenceStatus")]
+        public async Task<IActionResult> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel model)
+        {
+            string userId = await GetUserIdAsync(model);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Ok(new 
+                {
+                    message = "User not found!",
+                    status = "201",
+                    data = "no data"
+                });
+            }
+
+            var result = await _iUserRegisterDAL.GetSocialReferenceStatus(model);
+
+            if (result.Status == null)
+            {
+                return Ok(new
+                {
+                    message = "Some Error Occured!", 
+                    status = "201",
+                    data = "no data"
+                });
+            }
+
+            if ((model.Provider == "GOOGLE" && (result.Status == 1 || result.Status == 2)) ||
+                (model.Provider == "FACEBOOK" && (result.Status == 1 || result.Status == 2)))
+            {
+                var user = await userManager.FindByNameAsync(result.PhoneNumber);
+                if (user != null)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return Ok(new
+                    {
+                        message = "Successfully login!",
+                        status = "200",
+                        data = await GetDynamicData(result)
+                    });
+                }
+            }
+
+            if ((model.Provider == "GOOGLE" && result.Status == 3) ||
+                (model.Provider == "FACEBOOK" && result.Status == 3))
+            {
+                if (!string.IsNullOrEmpty(model.MobileNumber) && model.MobileNumber.Length > 10)
+                {
+                    ApplicationUser user = new ApplicationUser()
+                    {
+                        Email = model.Email,
+                        SecurityStamp = Guid.NewGuid().ToString(),
+                        UserName = model.MobileNumber,
+                        first_name = model.FirstName,
+                        last_name = model.LastName,
+                        PhoneNumber = model.MobileNumber,
+                        PhoneNumberConfirmed = true,
+                        EmailConfirmed = !string.IsNullOrEmpty(model.Email) && model.Email.Length > 5 
+                    };
+
+                    var result_user = await userManager.CreateAsync(user, "123456");
+                    if (result_user.Succeeded)
+                    {
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        return Ok(new
+                        {
+                            message = "Successfully login!",
+                            status = "200",
+                            data = await GetDynamicData(result)
+                        });
+                    }
+                    else
+                    {
+                        return Ok(new
+                        {
+                            message = "User registration failed!",
+                            status = "201",
+                            data = "no data found"
+                        });
+                    }
+                }
+            }
+
+            return Ok(new
+            {
+                message = "Some Error Occured!",
+                status = "201",
+                data = "no data found"
+            });
+        }
+
+        private async Task<string> GetUserIdAsync(AspNetUsersSocialUserReferenceSearchModel model)
+        {
+            if (model.Provider == "GOOGLE")
+            {
+                return GetGoogleUserId(model.SocialUserId);
+            }
+            else if (model.Provider == "FACEBOOK")
+            {
+                var fbidresult = GetFacebookUser(model.SocialUserId);
+                return fbidresult?.Id; 
+            }
+            return null;
+        }
+
+        private async Task<dynamic> GetDynamicData(AspNetUsersSocialUserReferenceViewModel model)
+        {
+            var user = await userManager.FindByNameAsync(model.UserName);
+
+            var userinfo = await _iUserRegisterDAL.GetUserRegistrationInfo(model.UserName);
+            var userRoles = await userManager.GetRolesAsync(user);
+            var authClaims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                };
+
+            foreach (var userRole in userRoles)
+            {
+                authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+            }
+            var token = GetJWTToken(authClaims);
+
+
+            var data = new
+            {
+                userinfo = userinfo,
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                expiration = token.ValidTo,
+                status = "200",
+                message = "Login Successfully!"
+            };
+            return data;
+        }
+
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            var user = await userManager.FindByEmailAsync(email);
+            if (user != null)
+            {
+                var result = await userManager.ConfirmEmailAsync(user, token);
+                if (result.Succeeded)
+                {
+            
+                    return Ok(new
+                    {
+                        status = "200",
+                        message = "Confirm Successfully!"
+                    });
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User OTP Failed!" }); 
+                }
+            }
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User Doesnot exist!" }); 
+        }
+
+        [HttpGet("ConfirmPhoneNumber")]
+        public async Task<IActionResult> ConfirmPhonenumber(string token, string phoneNumber)
+        {
+            var user = await userManager.FindByNameAsync(phoneNumber);
+            if (user != null)
+            {
+                var result = await userManager.ChangePhoneNumberAsync(user, user.PhoneNumber, token);
+                if (result.Succeeded)
+                {
+                    return Ok(new
+                    {
+                        
+                        status = "200",
+                        message = "Confirm Successfully!"
+                    });
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User OTP Failed!" });
+                }
+            }
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Error", message = "This User Doesnot exist!" });
+        }
+
+        private JwtSecurityToken GetJWTToken(List<Claim> authClaims)  
+        {
+            var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["JWT:ValidIssuer"],
+                audience: _configuration["JWT:ValidAudience"],
+                expires: DateTime.Now.AddDays(365),
+                claims: authClaims,
+                signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+                );
+
+            return token;
+        }
+        
+        private string GetGoogleUserId(string? idToken)   
+        {
+            try
+            {
+                var payload = GoogleJsonWebSignature.ValidateAsync(idToken, new GoogleJsonWebSignature.ValidationSettings()).Result;
+                return payload.Subject;
+            }
+            catch (Exception ex)
+            {
+
+                return "Exception Occured Ex:" + ex.Message.ToString();
+            }
+        }
+        private string GetUserIdFromFacebookIdToken(string? idToken)
+        {
+            try
+            {
+                var fb = new FacebookClient();
+                dynamic payload = fb.ParseSignedRequest("844edb50ec19d685632cae6a70375c5e", idToken);
+                return payload.user_id;
+
+            }
+            catch (Exception ex)
+            {
+                return "Exception Occured Ex:" + ex.Message.ToString();
+            }
+        }
+        private FacebookUserInfo GetFacebookUser(string? _accessToken)  
+        {
+            FacebookUserInfo userinfo = new FacebookUserInfo();
+            var client = new FacebookClient(_accessToken);
+            try
+            {
+                var result = client.Get("/me?fields=id,email");
+                var responseObj = JObject.Parse(result.ToString());
+                userinfo = new FacebookUserInfo()
+                {
+                    Id = responseObj["id"]?.ToString(),
+                    Email = responseObj["email"]?.ToString()
+                };
+            }
+            catch (Exception ex)
+            {
+                userinfo.Email = ex.Message.ToString();
+                return userinfo;
+            }
+
+            return userinfo;
+        }
+        private string ReturnSMSToken()
+        {
+            string Letter = @"1234567890";
+            var code = "";
+            for (int i = 0; i < 6; i++)
+            {
+                var rn = new Random();
+                int randomInt = rn.Next(1, 10);
+                code += Letter.Substring(randomInt - 1, 1);
+            }
+            return code;
         }
 
     }

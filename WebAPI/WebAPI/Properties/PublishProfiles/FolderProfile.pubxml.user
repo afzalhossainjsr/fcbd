@@ -6,7 +6,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\Publish\webAPI</_PublishTargetUrl>
-    <History>True|2023-09-29T02:57:44.5239254Z;True|2023-09-29T08:44:17.9590001+06:00;False|2023-09-29T08:43:46.7720543+06:00;True|2023-09-29T08:40:38.2462395+06:00;</History>
+    <History>True|2023-09-30T06:17:25.6670469Z;True|2023-09-30T12:14:58.0393838+06:00;True|2023-09-29T08:57:44.5239254+06:00;True|2023-09-29T08:44:17.9590001+06:00;False|2023-09-29T08:43:46.7720543+06:00;True|2023-09-29T08:40:38.2462395+06:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">

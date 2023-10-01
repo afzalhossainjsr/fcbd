@@ -544,5 +544,38 @@ namespace DAL.Common
         public string? message_cli { get; set; }
         public string? message_countrycode { get; set; }
     }
+    public class UserRegistrationInfoModel
+    {
+        public string? UserId { get; set; }
+        public string? UserName { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? PhoneNumberPrefix { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Email { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public int? GenderId { get; set; }
+        public string? GenderName { get; set; }
+        public string? UserImage { get; set; }
+
+    }
+    public class AspNetUsersSocialUserReferenceViewModel
+    {
+        public string? UserName { get; set; }
+        public string? Email { get; set; }
+        public string? PhoneNumber { get; set; }
+        public int? Status { get; set; }
+
+    }
+    public class AspNetUsersSocialUserReferenceSearchModel
+    {
+        public string? SocialUserId { get; set; }
+        public string? Provider { get; set; }
+        public string? Email { get; set; }
+        public string? MobileNumber { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+    }
+   
 
 }

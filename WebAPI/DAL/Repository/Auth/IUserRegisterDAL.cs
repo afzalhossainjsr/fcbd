@@ -9,6 +9,8 @@ namespace DAL.Repository.Auth
 {
     public interface IUserRegisterDAL
     {
+        Task<AspNetUsersSocialUserReferenceViewModel> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel obj);
+        Task<UserRegistrationInfoModel> GetUserRegistrationInfo(string? UserName);
         Task<OTPMessageResultModel> SendOTPMessage(string? phonenumber, string message);
     }
 }

@@ -10,6 +10,11 @@ D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\ClosedXML.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\DinkToPdf.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\DocumentFormat.OpenXml.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\ExcelNumberFormat.dll
+D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Facebook.dll
+D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Google.Apis.dll
+D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Google.Apis.Auth.PlatformServices.dll
+D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Google.Apis.Auth.dll
+D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Google.Apis.Core.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Irony.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
