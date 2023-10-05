@@ -126,6 +126,8 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 
+app.UseDeveloperExceptionPage();
+
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,0 +1,1021 @@
+﻿++Solution 'WebAPI' ‎(3 of 3 projects)
+i:{00000000-0000-0000-0000-000000000000}:WebAPI.sln
+++Model
+i:{00000000-0000-0000-0000-000000000000}:Model
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\model\bin\debug\net6.0\model.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\model\bin\debug\net6.0\model.dll
+++Dependencies
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:>710
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:>711
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1304
+++Auth
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\auth\
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\repository\auth\
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\services\auth\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\auth\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\controllers\auth\
+++Hubs
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\hubs\
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\repository\hubs\
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\services\hubs\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\hubs\
+++Team
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\team\
+++PlayerRegistrationModel.cs
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\team\playerregistrationmodel.cs
+++Class1.cs
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\class1.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\class1.cs
+++Analyzers
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:analyzers
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:analyzers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:analyzers
+++Frameworks
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:frameworks
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:frameworks
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:frameworks
+++AccountModel.cs
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\auth\accountmodel.cs
+++HubModel.cs
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\hubs\hubmodel.cs
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++System.Text.Json.SourceGeneration
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:c:\users\gadget bd 71\.nuget\packages\system.text.json\7.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\system.text.json\7.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{f7ff6d4d-71f8-4f3c-98c3-6a2cd0401d15}:d:\workstation\webapi\model\microsoft.netcore.app
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\microsoft.netcore.app
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\microsoft.netcore.app
+++DAL
+i:{00000000-0000-0000-0000-000000000000}:DAL
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\dal\bin\debug\net6.0\dal.dll
+++Common
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\common\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\common\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\controllers\common\
+++Repository
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\repository\
+++Services
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\services\
+++Packages
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:packages
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:packages
+++Projects
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:projects
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:projects
+++DataManager.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\common\datamanager.cs
+++IDataManager.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\common\idatamanager.cs
+++Microsoft.Extensions.Configuration (7.0.0)
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:>1320
+++Microsoft.Extensions.Configuration.FileExtensions (7.0.0)
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:>1317
+++Microsoft.Extensions.Configuration.Json (7.0.0)
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:>1318
+++Newtonsoft.Json (13.0.3)
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:>1316
+++System.Data.SqlClient (4.8.3)
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:>1319
+++IUserRegisterDAL.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\repository\auth\iuserregisterdal.cs
+++IConnectedUserDAL.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\repository\hubs\iconnecteduserdal.cs
+++UserRegisterDAL.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\services\auth\userregisterdal.cs
+++ConnectedUserDAL.cs
+i:{b83bf2ad-0aae-48da-bb06-0f4224a86c88}:d:\workstation\webapi\dal\services\hubs\connecteduserdal.cs
+++WebAPI
+i:{00000000-0000-0000-0000-000000000000}:WebAPI
+++Connected Services 
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1305
+++Imports
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>714
+++Properties
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\properties\
+++.config
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\.config\
+++bin
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\
+++Controllers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\controllers\
+++Files
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\files\
+++Migrations
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\migrations\
+++obj
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\
+++appsettings.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\appsettings.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\appsettings.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\appsettings.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\appsettings.json
+++libwkhtmltox.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\libwkhtmltox.dll
+++Program.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\program.cs
+++readme.txt
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\readme.txt
+++No service dependencies discovered
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1306
+++Sdk.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\sdk\sdk.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\sdk\sdk.targets
+++PublishProfiles
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\properties\publishprofiles\
+++launchSettings.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\properties\launchsettings.json
+++dotnet-tools.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\.config\dotnet-tools.json
+++ApplicationDbContext.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\auth\applicationdbcontext.cs
+++ApplicationUser.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\auth\applicationuser.cs
+++Debug
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\
+++Release
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\
+++ExcelGenerator.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\common\excelgenerator.cs
+++PdfGenerator.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\common\pdfgenerator.cs
+++Images
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\files\images\
+++Pdf
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\files\pdf\
+++NotificationHubs.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\hubs\notificationhubs.cs
+++20230929145215_initialCreate.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\migrations\20230929145215_initialcreate.cs
+++ApplicationDbContextModelSnapshot.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\migrations\applicationdbcontextmodelsnapshot.cs
+++project.assets.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\project.assets.json
+++project.nuget.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\project.nuget.cache
+++staticwebassets.pack.sentinel
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\staticwebassets.pack.sentinel
+++WebAPI.csproj.EntityFrameworkCore.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.entityframeworkcore.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.entityframeworkcore.targets
+++WebAPI.csproj.nuget.dgspec.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.nuget.dgspec.json
+++WebAPI.csproj.nuget.g.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.nuget.g.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.nuget.g.props
+++WebAPI.csproj.nuget.g.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.nuget.g.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\webapi.csproj.nuget.g.targets
+++appsettings.Development.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\appsettings.development.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\appsettings.development.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\appsettings.development.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.2\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++Microsoft.AspNetCore.App
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\microsoft.aspnetcore.app
+++ClosedXML (0.102.1)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1355
+++DinkToPdf (1.0.8)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1352
+++Facebook (7.0.6)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1345
+++Google.Apis.Auth (1.62.1)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1349
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.2)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1353
+++Microsoft.AspNetCore.Identity (2.2.0)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1348
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.0)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1351
+++Microsoft.AspNetCore.Mvc.NewtonsoftJson (6.0.2)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1350
+++Microsoft.AspNetCore.SignalR (1.1.0)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1356
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.2)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1346
+++Microsoft.EntityFrameworkCore.Tools (6.0.1)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1354
+++SixLabors.ImageSharp (3.0.2)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1344
+++Swashbuckle.AspNetCore (6.5.0)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:>1347
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\sdk\sdk.props
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.101\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
+++FolderProfile.pubxml
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\properties\publishprofiles\folderprofile.pubxml
+++FolderProfile.pubxml.user
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\properties\publishprofiles\folderprofile.pubxml.user
+++net6.0
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\browser\lib\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\browser\lib\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\net6.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\browser\lib\net6.0\
+++AccountController.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\controllers\auth\accountcontroller.cs
+++BasicController.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\controllers\common\basiccontroller.cs
+++News
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\files\images\news\
+++Player
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\files\images\player\
+++User
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\files\images\user\
+++20230929145215_initialCreate.Designer.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\migrations\20230929145215_initialcreate.designer.cs
+++Microsoft.Common.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Sdk.Razor.CurrentVersion.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
+++Microsoft.NET.Sdk.Web.ProjectSystem.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
+++Microsoft.NET.Sdk.Publish.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.NET.Sdk.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++Sdk.Razor.CurrentVersion.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
+++Microsoft.NET.Sdk.Web.ProjectSystem.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
+++Microsoft.NET.Sdk.Publish.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
+++ref
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\ref\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\ref\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\ref\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\ref\
+++runtimes
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\
+++ClosedXML.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\closedxml.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\closedxml.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\closedxml.dll
+++DAL.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\dal.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\dal.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\dal.dll
+++DAL.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\dal.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\dal.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\dal.pdb
+++DinkToPdf.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\dinktopdf.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\dinktopdf.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\dinktopdf.dll
+++DocumentFormat.OpenXml.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\documentformat.openxml.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\documentformat.openxml.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\documentformat.openxml.dll
+++ExcelNumberFormat.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\excelnumberformat.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\excelnumberformat.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\excelnumberformat.dll
+++Facebook.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\facebook.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\facebook.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\facebook.dll
+++Google.Apis.Auth.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\google.apis.auth.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\google.apis.auth.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\google.apis.auth.dll
+++Google.Apis.Auth.PlatformServices.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\google.apis.auth.platformservices.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\google.apis.auth.platformservices.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\google.apis.auth.platformservices.dll
+++Google.Apis.Core.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\google.apis.core.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\google.apis.core.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\google.apis.core.dll
+++Google.Apis.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\google.apis.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\google.apis.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\google.apis.dll
+++Humanizer.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\humanizer.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\humanizer.dll
+++Irony.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\irony.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\irony.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\irony.dll
+++Microsoft.AspNetCore.Authentication.JwtBearer.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.aspnetcore.authentication.jwtbearer.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.aspnetcore.authentication.jwtbearer.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.aspnetcore.authentication.jwtbearer.dll
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.aspnetcore.identity.entityframeworkcore.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.aspnetcore.identity.entityframeworkcore.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.aspnetcore.identity.entityframeworkcore.dll
+++Microsoft.AspNetCore.JsonPatch.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.aspnetcore.jsonpatch.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.aspnetcore.jsonpatch.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.aspnetcore.jsonpatch.dll
+++Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.aspnetcore.mvc.newtonsoftjson.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.aspnetcore.mvc.newtonsoftjson.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.aspnetcore.mvc.newtonsoftjson.dll
+++Microsoft.Data.SqlClient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp3.1\microsoft.data.sqlclient.dll
+++Microsoft.EntityFrameworkCore.Abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.entityframeworkcore.abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.entityframeworkcore.abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.entityframeworkcore.abstractions.dll
+++Microsoft.EntityFrameworkCore.Design.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.entityframeworkcore.design.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.entityframeworkcore.design.dll
+++Microsoft.EntityFrameworkCore.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.entityframeworkcore.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.entityframeworkcore.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.entityframeworkcore.dll
+++Microsoft.EntityFrameworkCore.Relational.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.entityframeworkcore.relational.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.entityframeworkcore.relational.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.entityframeworkcore.relational.dll
+++Microsoft.EntityFrameworkCore.SqlServer.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.entityframeworkcore.sqlserver.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.entityframeworkcore.sqlserver.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.entityframeworkcore.sqlserver.dll
+++Microsoft.Extensions.Caching.Memory.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.caching.memory.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.caching.memory.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.caching.memory.dll
+++Microsoft.Extensions.Configuration.Abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.configuration.abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.configuration.abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.configuration.abstractions.dll
+++Microsoft.Extensions.Configuration.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.configuration.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.configuration.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.configuration.dll
+++Microsoft.Extensions.Configuration.FileExtensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.configuration.fileextensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.configuration.fileextensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.configuration.fileextensions.dll
+++Microsoft.Extensions.Configuration.Json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.configuration.json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.configuration.json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.configuration.json.dll
+++Microsoft.Extensions.FileProviders.Abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.fileproviders.abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.fileproviders.abstractions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.fileproviders.abstractions.dll
+++Microsoft.Extensions.FileProviders.Physical.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.fileproviders.physical.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.fileproviders.physical.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.fileproviders.physical.dll
+++Microsoft.Extensions.FileSystemGlobbing.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.filesystemglobbing.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.filesystemglobbing.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.filesystemglobbing.dll
+++Microsoft.Extensions.Primitives.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.extensions.primitives.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.extensions.primitives.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.extensions.primitives.dll
+++Microsoft.Identity.Client.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.identity.client.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.identity.client.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.identity.client.dll
+++Microsoft.IdentityModel.JsonWebTokens.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.identitymodel.jsonwebtokens.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.identitymodel.jsonwebtokens.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.identitymodel.jsonwebtokens.dll
+++Microsoft.IdentityModel.Logging.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.identitymodel.logging.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.identitymodel.logging.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.identitymodel.logging.dll
+++Microsoft.IdentityModel.Protocols.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.identitymodel.protocols.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.identitymodel.protocols.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.identitymodel.protocols.dll
+++Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.identitymodel.protocols.openidconnect.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.identitymodel.protocols.openidconnect.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.identitymodel.protocols.openidconnect.dll
+++Microsoft.IdentityModel.Tokens.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.identitymodel.tokens.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.identitymodel.tokens.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.identitymodel.tokens.dll
+++Microsoft.OpenApi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.openapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.openapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.openapi.dll
+++Microsoft.Win32.SystemEvents.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\microsoft.win32.systemevents.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\microsoft.win32.systemevents.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\microsoft.win32.systemevents.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\microsoft.win32.systemevents.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp3.0\microsoft.win32.systemevents.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp3.0\microsoft.win32.systemevents.dll
+++Model.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\model.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\model.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\model.dll
+++Model.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\model.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\model.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\model.pdb
+++Newtonsoft.Json.Bson.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\newtonsoft.json.bson.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\newtonsoft.json.bson.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\newtonsoft.json.bson.dll
+++Newtonsoft.Json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\newtonsoft.json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\newtonsoft.json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\newtonsoft.json.dll
+++SixLabors.Fonts.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\sixlabors.fonts.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\sixlabors.fonts.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\sixlabors.fonts.dll
+++SixLabors.ImageSharp.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\sixlabors.imagesharp.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\sixlabors.imagesharp.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\sixlabors.imagesharp.dll
+++Swashbuckle.AspNetCore.Swagger.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\swashbuckle.aspnetcore.swagger.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\swashbuckle.aspnetcore.swagger.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\swashbuckle.aspnetcore.swagger.dll
+++Swashbuckle.AspNetCore.SwaggerGen.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\swashbuckle.aspnetcore.swaggergen.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\swashbuckle.aspnetcore.swaggergen.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\swashbuckle.aspnetcore.swaggergen.dll
+++Swashbuckle.AspNetCore.SwaggerUI.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\swashbuckle.aspnetcore.swaggerui.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\swashbuckle.aspnetcore.swaggerui.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\swashbuckle.aspnetcore.swaggerui.dll
+++System.Configuration.ConfigurationManager.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.configuration.configurationmanager.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.configuration.configurationmanager.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.configuration.configurationmanager.dll
+++System.Data.SqlClient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\netcoreapp2.1\system.data.sqlclient.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp2.1\system.data.sqlclient.dll
+++System.Drawing.Common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\netcoreapp3.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp3.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\netcoreapp3.0\system.drawing.common.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp3.0\system.drawing.common.dll
+++System.IdentityModel.Tokens.Jwt.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.identitymodel.tokens.jwt.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.identitymodel.tokens.jwt.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.identitymodel.tokens.jwt.dll
+++System.IO.Packaging.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.io.packaging.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.io.packaging.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.io.packaging.dll
+++System.Net.WebSockets.WebSocketProtocol.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.net.websockets.websocketprotocol.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.net.websockets.websocketprotocol.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.net.websockets.websocketprotocol.dll
+++System.Runtime.Caching.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.runtime.caching.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.runtime.caching.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.runtime.caching.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\system.runtime.caching.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netstandard2.0\system.runtime.caching.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netstandard2.0\system.runtime.caching.dll
+++System.Security.Cryptography.ProtectedData.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.security.cryptography.protecteddata.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.security.cryptography.protecteddata.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.security.cryptography.protecteddata.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netstandard2.0\system.security.cryptography.protecteddata.dll
+++System.Security.Permissions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.security.permissions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.security.permissions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.security.permissions.dll
+++System.Text.Encodings.Web.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.text.encodings.web.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.text.encodings.web.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.text.encodings.web.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\browser\lib\net6.0\system.text.encodings.web.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\browser\lib\net6.0\system.text.encodings.web.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\browser\lib\net6.0\system.text.encodings.web.dll
+++System.Text.Json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.text.json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.text.json.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.text.json.dll
+++System.Windows.Extensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\system.windows.extensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\system.windows.extensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\system.windows.extensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\system.windows.extensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp3.0\system.windows.extensions.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp3.0\system.windows.extensions.dll
+++WebAPI.deps.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\webapi.deps.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\webapi.deps.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.deps.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\webapi.deps.json
+++WebAPI.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\ref\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\ref\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\ref\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\ref\webapi.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\webapi.dll
+++WebAPI.exe
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\webapi.exe
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\webapi.exe
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\webapi.exe
+++WebAPI.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\webapi.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\webapi.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.pdb
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\webapi.pdb
+++WebAPI.runtimeconfig.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\webapi.runtimeconfig.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\webapi.runtimeconfig.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\webapi.runtimeconfig.json
+++XLParser.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\xlparser.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\xlparser.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\xlparser.dll
+++staticwebassets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\staticwebassets\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\staticwebassets\
+++.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\.netcoreapp,version=v6.0.assemblyattributes.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\.netcoreapp,version=v6.0.assemblyattributes.cs
+++apphost.exe
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\apphost.exe
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\apphost.exe
+++staticwebassets.build.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\staticwebassets.build.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\staticwebassets.build.json
+++WebAPI.AssemblyInfo.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.assemblyinfo.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.assemblyinfo.cs
+++WebAPI.AssemblyInfoInputs.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.assemblyinfoinputs.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.assemblyinfoinputs.cache
+++WebAPI.assets.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.assets.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.assets.cache
+++WebAPI.csproj.AssemblyReference.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.csproj.assemblyreference.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.csproj.assemblyreference.cache
+++WebAPI.csproj.CopyComplete
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.csproj.copycomplete
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.csproj.copycomplete
+++WebAPI.csproj.CoreCompileInputs.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.csproj.corecompileinputs.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.csproj.corecompileinputs.cache
+++WebAPI.csproj.FileListAbsolute.txt
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.csproj.filelistabsolute.txt
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.csproj.filelistabsolute.txt
+++WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.generatedmsbuildeditorconfig.editorconfig
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.generatedmsbuildeditorconfig.editorconfig
+++WebAPI.genruntimeconfig.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.genruntimeconfig.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.genruntimeconfig.cache
+++WebAPI.GlobalUsings.g.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.globalusings.g.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.globalusings.g.cs
+++WebAPI.MvcApplicationPartsAssemblyInfo.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.mvcapplicationpartsassemblyinfo.cache
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.mvcapplicationpartsassemblyinfo.cache
+++WebAPI.MvcApplicationPartsAssemblyInfo.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\debug\net6.0\webapi.mvcapplicationpartsassemblyinfo.cs
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\webapi.mvcapplicationpartsassemblyinfo.cs
+++PubTmp
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\
+++PublishOutputs.01e3ee4652.txt
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\publishoutputs.01e3ee4652.txt
+++staticwebassets.publish.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\staticwebassets.publish.json
+++Microsoft.LiveUnitTesting.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.liveunittesting.props
+++Microsoft.NuGet.ImportBefore.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++Sdk.Razor.StaticAssets.ProjectSystem.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
+++Microsoft.TypeScript.Default.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
+++Microsoft.NET.Sdk.Web.DefaultItems.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Before.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.Managed.After.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.NET.Sdk.Razor.Configuration.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
+++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
+++Microsoft.NET.Sdk.Razor.SourceGenerators.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.sourcegenerators.targets
+++Microsoft.NET.Sdk.Razor.StaticWebAssets.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.targets
+++Microsoft.NET.Sdk.Razor.ScopedCss.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.scopedcss.targets
+++Microsoft.NET.Sdk.Razor.JSModules.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.jsmodules.targets
+++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
+++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
+++Microsoft.NET.Sdk.Razor.DesignTime.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
+++Microsoft.TypeScript.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
+++Microsoft.TypeScript.DotNetCore.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
+++Microsoft.Web.Designtime.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
+++Default.pubxml
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
+++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
+++Microsoft.NET.Sdk.Publish.FilterFiles.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
+++Microsoft.NET.Sdk.Publish.CopyFiles.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
+++Microsoft.NET.Sdk.Publish.TransformFiles.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
+++Microsoft.NET.Sdk.Publish.FileSystem.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
+++Microsoft.NET.Sdk.DotNetCLITool.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
+++browser
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\browser\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\browser\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\browser\
+++unix
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\
+++win
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\
+++win-arm
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm\
+++win-arm64
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm64\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm64\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm64\
+++win-x64
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x64\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x64\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x64\
+++win-x86
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x86\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x86\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x86\
+++Out
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\
+++Microsoft.Extensions.ApiDescription.Server.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5\build\microsoft.extensions.apidescription.server.props
+++Swashbuckle.AspNetCore.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\swashbuckle.aspnetcore\6.5.0\build\swashbuckle.aspnetcore.props
+++SixLabors.ImageSharp.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\sixlabors.imagesharp\3.0.2\build\sixlabors.imagesharp.props
+++Microsoft.EntityFrameworkCore.Design.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\microsoft.entityframeworkcore.design\6.0.1\build\net6.0\microsoft.entityframeworkcore.design.props
+++Microsoft.NuGet.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\microsoft.netcoresdk.bundledversions.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.android)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.ios)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maccatalyst)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.macos)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maui)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.tvos)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.emscripten)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.mono.toolchain)
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk-manifests\6.0.100\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.CSharp.Core.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.targets
+++Microsoft.ServiceModel.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.servicemodel.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.servicemodel.targets
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++Microsoft.CodeAnalysis.NetAnalyzers.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.targets
+++lib
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\browser\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\browser\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\browser\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\
+++native
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm64\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x64\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x86\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm64\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x64\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x86\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm64\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x64\native\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x86\native\
+++appsettings.production.json
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\appsettings.production.json
+++web.config
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\web.config
+++Microsoft.NET.ILLink.Tasks.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++Microsoft.Managed.Core.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++Microsoft.Common.CurrentVersion.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
+++netcoreapp2.1
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\netcoreapp2.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp2.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\netcoreapp2.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp2.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\netcoreapp2.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp2.1\
+++netcoreapp3.0
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\netcoreapp3.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp3.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\netcoreapp3.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp3.0\
+++netcoreapp3.1
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\unix\lib\netcoreapp3.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netcoreapp3.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\unix\lib\netcoreapp3.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netcoreapp3.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\unix\lib\netcoreapp3.1\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netcoreapp3.1\
+++netstandard2.0
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win\lib\netstandard2.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win\lib\netstandard2.0\
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win\lib\netstandard2.0\
+++Microsoft.Data.SqlClient.SNI.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm64\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x64\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x86\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm64\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x64\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x86\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm64\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x64\native\microsoft.data.sqlclient.sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x86\native\microsoft.data.sqlclient.sni.dll
+++sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-arm64\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x64\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\debug\net6.0\runtimes\win-x86\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-arm64\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x64\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\bin\release\net6.0\runtimes\win-x86\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-arm64\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x64\native\sni.dll
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\obj\release\net6.0\pubtmp\out\runtimes\win-x86\native\sni.dll
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
+++Microsoft.LiveUnitTesting.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importbefore\microsoft.liveunittesting.targets
+++WebAPI.csproj.user
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:d:\workstation\webapi\webapi\webapi.csproj.user
+++Microsoft.NET.props
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.net.props
+++Microsoft.CodeAnalysis.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
+++Microsoft.Xaml.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.xaml.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
+++Microsoft.WorkflowBuildExtensions.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
+++Microsoft.TeamTest.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
+++NuGet.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.targets
+++Microsoft.Docker.ImportAfter.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
+++Microsoft.NET.Build.Extensions.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
+++Microsoft.NuGet.ImportAfter.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
+++Microsoft.QualityTools.Testing.Fakes.ImportAfter.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.qualitytools.testing.fakes.importafter.targets
+++Microsoft.Web.ImportAfter.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
+++System.Text.Json.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\system.text.json\7.0.0\buildtransitive\net6.0\system.text.json.targets
+++Microsoft.Extensions.ApiDescription.Server.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\users\gadget bd 71\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5\build\microsoft.extensions.apidescription.server.targets
+++Microsoft.Docker.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
+++Microsoft.QualityTools.Testing.Fakes.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\fakes\microsoft.qualitytools.testing.fakes.targets
+++Microsoft.Web.IISSupport.targets
+i:{39cda8d4-7da5-456d-8dd6-f36a49a28137}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets

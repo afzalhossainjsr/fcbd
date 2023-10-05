@@ -20,18 +20,13 @@ namespace DAL.Services.Auth
 
             _dataManager = dataManager;
         }
-       
-     
-
         public async Task<OTPMessageResultModel> SendOTPMessage(string? phonenumber, string message)
         {
             var result = await _dataManager.SendSingleMessage(phonenumber, message);
             return result;
         }
-     
         public async Task<AspNetUsersSocialUserReferenceViewModel> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel obj)
         {
-
             AspNetUsersSocialUserReferenceViewModel Info = new AspNetUsersSocialUserReferenceViewModel();
             List<SqlParameter> parameterList = new List<SqlParameter>();
             parameterList.Add(new SqlParameter("@SocialUserId", obj.SocialUserId));

@@ -19,12 +19,14 @@ namespace WebAPI.Controllers.Common
         [HttpGet("GetData")]
         public IActionResult test()
         {
+            var UserName = User?.Identity?.Name;
             return  new JsonResult("Test");
         }
         [HttpGet]
         [Route("generatePdfA4")]
         public IActionResult GeneratePdf()
         {
+            var UserName = User?.Identity?.Name;
             string htmlContent = @"
 <!DOCTYPE html>
 <html>
@@ -125,6 +127,7 @@ tfoot {
         [HttpGet("ExportExcel")] 
         public IActionResult ExportExcel()
         {
+            var UserName = User?.Identity?.Name;
             DataTable table = new DataTable("SampleTable");
             table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Name", typeof(string));
@@ -135,27 +138,6 @@ tfoot {
             var secondTitle = "1 January, 2023";
             return ExcelGenerator.GenerateExcel01(table, title, secondTitle);
         }
-        private FacebookUserInfo GetFaceBookUser(string _accessToken) 
-        {
-            FacebookUserInfo userinfo = new FacebookUserInfo();
-            var client = new FacebookClient(_accessToken);
-            try
-            {
-                var result = client.Get("/me?fields=id,email");
-                var responseObj = JObject.Parse(result?.ToString());
-                userinfo = new FacebookUserInfo()
-                {
-                    Id = responseObj["id"]?.ToString(),
-                    Email = responseObj["email"]?.ToString()
-                };
-            }
-            catch (Exception ex)
-            {
-                userinfo.Email = ex.Message.ToString();
-                return userinfo;
-            }
-
-            return userinfo;
-        }
+      
     }
 }
