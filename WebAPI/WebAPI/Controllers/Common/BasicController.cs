@@ -1,5 +1,7 @@
 ﻿using System.Data;
 using Facebook;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Auth;
@@ -13,20 +15,31 @@ namespace WebAPI.Controllers.Common
     [ApiController]
     public class BasicController : ControllerBase
     {
-        
 
 
         [HttpGet("GetData")]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
         public IActionResult test()
         {
             var UserName = User?.Identity?.Name;
-            return  new JsonResult("Test");
+            var username2 = HttpContext.User?.Identity?.Name;
+            return new JsonResult("Test");
         }
+        [HttpGet("GetData2")]
+       
+        public IActionResult test2() 
+        {
+            var UserName = User?.Identity?.Name;
+            var username2 = HttpContext.User?.Identity?.Name;
+            return new JsonResult("Test");
+        }
+
         [HttpGet]
         [Route("generatePdfA4")]
         public IActionResult GeneratePdf()
         {
             var UserName = User?.Identity?.Name;
+            var username2 = HttpContext.User?.Identity?.Name;
             string htmlContent = @"
 <!DOCTYPE html>
 <html>

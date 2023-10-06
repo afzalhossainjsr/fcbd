@@ -67,8 +67,9 @@ builder.Services.AddAuthentication(options =>
                 options.Cookie.HttpOnly = true;
                 options.Cookie.SameSite = SameSiteMode.Strict;
                 options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Enable this in production with HTTPS
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiration time
+                options.ExpireTimeSpan = TimeSpan.FromDays(30); // Set cookie expiration time
                 options.LoginPath = "/Account/Login"; // Specify the login path for UI
+                options.SlidingExpiration = true;
             });
 
 //Auth Related Settings
@@ -137,6 +138,7 @@ app.UseDeveloperExceptionPage();
 
 
 app.UseAuthentication();
+app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers(); 

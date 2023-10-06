@@ -5,6 +5,8 @@ using DAL.Common;
 using DAL.Repository.Auth;
 using Facebook;
 using Google.Apis.Auth;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -110,6 +112,58 @@ namespace WebAPI.Controllers.Auth
             return Ok(new { message = "password does not match", status = "201" });
         }
 
+        [HttpPost]
+        [Route("login-user2")] 
+        public async Task<IActionResult> LoginUser2(LoginModel model) 
+        {
+            var user = await userManager.FindByNameAsync(model.UserName);
+
+            if (user == null)
+            {
+                return Ok(new Response { message = "User not exists!", status = "201" });
+            }
+
+            if (await userManager.CheckPasswordAsync(user, model.Password))
+            {
+                var userRoles = await userManager.GetRolesAsync(user);
+
+                var authClaims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        };
+
+                authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
+
+                // Create the identity for the user
+                var claimsIdentity = new ClaimsIdentity(
+                    authClaims,
+                    CookieAuthenticationDefaults.AuthenticationScheme);
+
+                // Create authentication properties for the persistent login session
+                var authProperties = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    IsPersistent = true, // Set to true for persistent login
+                    ExpiresUtc = DateTimeOffset.UtcNow.Add(TimeSpan.FromDays(30)) // Set cookie expiration time to 30 days
+                };
+
+                // Sign in the user with the created claims identity and auth properties
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
+
+                return Ok(new
+                {
+                    userinfo = new { UserName = user.UserName, Email = user.Email }, // Customize userinfo as needed
+                    status = "200",
+                    message = "Login Successfully!"
+                });
+            }
+
+            return Ok(new { message = "Password does not match", status = "201" });
+        }
         [HttpPost]
         [Route("GetSocialReferenceStatus")]
         public async Task<IActionResult> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel model)
