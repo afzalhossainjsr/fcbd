@@ -62,6 +62,13 @@ builder.Services.AddAuthentication(options =>
                     ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
                 };
+            }).AddCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.Cookie.SameSite = SameSiteMode.Strict;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Enable this in production with HTTPS
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiration time
+                options.LoginPath = "/Account/Login"; // Specify the login path for UI
             });
 
 //Auth Related Settings
@@ -130,7 +137,6 @@ app.UseDeveloperExceptionPage();
 
 
 app.UseAuthentication();
-app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers(); 
