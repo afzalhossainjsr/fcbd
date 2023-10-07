@@ -27,6 +27,7 @@ namespace Model.Team
         public string? jersey_number { get; set; }
         public string? player_user_id { get; set; }
         public string? profile_image { get; set; }
+        public string? profile_image_base64 { get; set; } 
         public string? gender_id { get; set; }
 
     }

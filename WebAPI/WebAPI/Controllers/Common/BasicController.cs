@@ -23,7 +23,7 @@ namespace WebAPI.Controllers.Common
         {
             var UserName = User?.Identity?.Name;
             var username2 = HttpContext.User?.Identity?.Name;
-            return new JsonResult("Test");
+            return new JsonResult("Test: - "+ username2);
         }
         [HttpGet("GetData2")]
        

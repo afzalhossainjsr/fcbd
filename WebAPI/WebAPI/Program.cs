@@ -2,8 +2,10 @@ using System.Text;
 using DAL.Common;
 using DAL.Repository.Auth;
 using DAL.Repository.Hubs;
+using DAL.Repository.Team;
 using DAL.Services.Auth;
 using DAL.Services.Hubs;
+using DAL.Services.Team;
 using DinkToPdf;
 using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -107,6 +109,7 @@ builder.Host.ConfigureServices(services =>
     services.AddScoped<IDataManager, DataManager>();
     services.AddScoped<IConnectedUserDAL, ConnectedUserDAL>();
     services.AddScoped<IUserRegisterDAL, UserRegisterDAL>();
+    services.AddScoped<IPlayerRegistrationDal, PlayerRegistrationDal>();
 });
 
 //app configurations

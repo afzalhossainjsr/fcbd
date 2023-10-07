@@ -57,9 +57,30 @@ namespace DAL.Services.Team
                              InActive = 3; 
         private async Task<ResultObject> SetData(int? SaveOption, string? userName, PlayerRegistrationModel obj)
         {
+               
+           
+                 
+
             List<SqlParameter> parameterList = new List<SqlParameter>();
-            parameterList.Add(new SqlParameter("@SaveOption", SaveOption));
-            parameterList.Add(new SqlParameter("@UserName", userName));
+            parameterList.Add(new SqlParameter("@save_option", SaveOption));
+            parameterList.Add(new SqlParameter("@user_name", userName));
+            parameterList.Add(new SqlParameter("@first_name_bn", obj.first_name_bn));
+            parameterList.Add(new SqlParameter("@last_name_bn", obj.last_name_bn));
+            parameterList.Add(new SqlParameter("@first_name_en", obj.first_name_en));
+            parameterList.Add(new SqlParameter("@last_name_en", obj.last_name_en));
+            parameterList.Add(new SqlParameter("@nick_name_bn", obj.nick_name_bn));
+            parameterList.Add(new SqlParameter("@nick_name_en", obj.nick_name_en));
+            parameterList.Add(new SqlParameter("@date_of_birth", obj.date_of_birth));
+            parameterList.Add(new SqlParameter("@height", obj.height));
+            parameterList.Add(new SqlParameter("@weight", obj.weight));
+            parameterList.Add(new SqlParameter("@mobile_number", obj.mobile_number));
+            parameterList.Add(new SqlParameter("@email", obj.email));
+            parameterList.Add(new SqlParameter("@district_id", obj.district_id));
+            parameterList.Add(new SqlParameter("@thana_id", obj.thana_id));
+            parameterList.Add(new SqlParameter("@player_position_id", obj.player_position_id));
+            parameterList.Add(new SqlParameter("@jersey_number", obj.jersey_number));
+            parameterList.Add(new SqlParameter("@profile_image", obj.profile_image));
+            parameterList.Add(new SqlParameter("@gender_id", obj.gender_id));
             parameterList.Add(new SqlParameter("@IdentityValue", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
             parameterList.Add(new SqlParameter("@ErrNo", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
             SqlParameter[] parameters = parameterList.ToArray();
