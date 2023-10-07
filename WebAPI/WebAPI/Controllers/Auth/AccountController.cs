@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
 using DAL.Common;
@@ -7,6 +8,7 @@ using Facebook;
 using Google.Apis.Auth;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -27,9 +29,10 @@ namespace WebAPI.Controllers.Auth
         private readonly IConfiguration _configuration;
         private readonly EmailConfiguration _emailConfig;
         private readonly IUserRegisterDAL _iUserRegisterDAL;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         public AccountController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager,
           IConfiguration configuration, EmailConfiguration emailConfig, SignInManager<ApplicationUser> signInManager ,
-           IUserRegisterDAL iUserRegisterDAL)
+           IUserRegisterDAL iUserRegisterDAL, IHttpContextAccessor httpContextAccessor)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
@@ -37,6 +40,7 @@ namespace WebAPI.Controllers.Auth
             _emailConfig = emailConfig;
             _signInManager = signInManager;
             _iUserRegisterDAL = iUserRegisterDAL;
+            _httpContextAccessor = httpContextAccessor;
         }
         [HttpPost]
         [Route("register-user")]
@@ -112,9 +116,61 @@ namespace WebAPI.Controllers.Auth
             return Ok(new { message = "password does not match", status = "201" });
         }
 
+        //[HttpPost]
+        //[Route("login-user2")] 
+        //public async Task<IActionResult> LoginUser2(LoginModel model) 
+        //{
+        //    var user = await userManager.FindByNameAsync(model.UserName);
+
+        //    if (user == null)
+        //    {
+        //        return Ok(new Response { message = "User not exists!", status = "201" });
+        //    }
+
+        //    if (await userManager.CheckPasswordAsync(user, model.Password))
+        //    {
+        //        var userRoles = await userManager.GetRolesAsync(user);
+
+        //        var authClaims = new List<Claim>
+        //{
+        //    new Claim(ClaimTypes.Name, user.UserName),
+        //    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        //};
+
+        //        authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
+
+        //        // Create the identity for the user
+        //        var claimsIdentity = new ClaimsIdentity(
+        //            authClaims,
+        //            CookieAuthenticationDefaults.AuthenticationScheme);
+
+        //        // Create authentication properties for the persistent login session
+        //        var authProperties = new AuthenticationProperties
+        //        {
+        //            AllowRefresh = true,
+        //            IsPersistent = true, // Set to true for persistent login
+        //            ExpiresUtc = DateTimeOffset.UtcNow.Add(TimeSpan.FromDays(30)) // Set cookie expiration time to 30 days
+        //        };
+
+        //        // Sign in the user with the created claims identity and auth properties
+        //        await HttpContext.SignInAsync(
+        //            CookieAuthenticationDefaults.AuthenticationScheme,
+        //            new ClaimsPrincipal(claimsIdentity),
+        //            authProperties);
+
+        //        return Ok(new
+        //        {
+        //            userinfo = new { UserName = user.UserName, Email = user.Email }, // Customize userinfo as needed
+        //            status = "200",
+        //            message = "Login Successfully!"
+        //        });
+        //    }
+
+        //    return Ok(new { message = "Password does not match", status = "201" });
+        //}
         [HttpPost]
-        [Route("login-user2")] 
-        public async Task<IActionResult> LoginUser2(LoginModel model) 
+        [Route("login-user2")]
+        public async Task<IActionResult> LoginUser2(LoginModel model)
         {
             var user = await userManager.FindByNameAsync(model.UserName);
 
@@ -128,10 +184,10 @@ namespace WebAPI.Controllers.Auth
                 var userRoles = await userManager.GetRolesAsync(user);
 
                 var authClaims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, user.UserName),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        };
+            {
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            };
 
                 authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
 
@@ -164,6 +220,7 @@ namespace WebAPI.Controllers.Auth
 
             return Ok(new { message = "Password does not match", status = "201" });
         }
+
         [HttpPost]
         [Route("GetSocialReferenceStatus")]
         public async Task<IActionResult> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel model)
@@ -527,6 +584,35 @@ namespace WebAPI.Controllers.Auth
 
             return new JsonResult(lst);
         }
+
+        [HttpGet("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok("Success");
+        }
+
+
+        [HttpGet("CheckLoginStatus")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult CheckLoginStatus()
+        {
+            // Your logic to check login status
+            var isAuthenticated = _httpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
+            return Ok(new { status = isAuthenticated ? 1 : 0 });
+        }
+        [HttpGet("IsLoggedIn")]
+        public bool IsLoggedIn()
+        {
+            var UserName = User?.Identity?.Name;
+            var isAuthenticated = HttpContext?.User?.Identity?.IsAuthenticated;
+            return isAuthenticated.HasValue && isAuthenticated.Value;
+        }
+
+
+
+
     }
 
 }

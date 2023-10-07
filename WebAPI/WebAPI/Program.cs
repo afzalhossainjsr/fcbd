@@ -8,6 +8,7 @@ using DAL.Services.Hubs;
 using DAL.Services.Team;
 using DinkToPdf;
 using DinkToPdf.Contracts;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -46,12 +47,14 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-// Adding Authentication
+//Adding Authentication
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+ options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+ options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
             {
                 options.SaveToken = true;
@@ -67,12 +70,13 @@ builder.Services.AddAuthentication(options =>
             }).AddCookie(options =>
             {
                 options.Cookie.HttpOnly = true;
-                options.Cookie.SameSite = SameSiteMode.Strict;
+                options.Cookie.SameSite = SameSiteMode.None;
                 options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Enable this in production with HTTPS
                 options.ExpireTimeSpan = TimeSpan.FromDays(30); // Set cookie expiration time
                 options.LoginPath = "/Account/Login"; // Specify the login path for UI
                 options.SlidingExpiration = true;
             });
+
 
 //Auth Related Settings
 builder.Services.Configure<IdentityOptions>(options =>
@@ -138,6 +142,8 @@ app.UseStaticFiles(new StaticFileOptions
 
 
 app.UseDeveloperExceptionPage();
+
+
 
 
 app.UseAuthentication();

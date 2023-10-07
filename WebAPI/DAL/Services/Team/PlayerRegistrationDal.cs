@@ -71,8 +71,6 @@ namespace DAL.Services.Team
             parameterList.Add(new SqlParameter("@nick_name_bn", obj.nick_name_bn));
             parameterList.Add(new SqlParameter("@nick_name_en", obj.nick_name_en));
             parameterList.Add(new SqlParameter("@date_of_birth", obj.date_of_birth));
-            parameterList.Add(new SqlParameter("@height", obj.height));
-            parameterList.Add(new SqlParameter("@weight", obj.weight));
             parameterList.Add(new SqlParameter("@mobile_number", obj.mobile_number));
             parameterList.Add(new SqlParameter("@email", obj.email));
             parameterList.Add(new SqlParameter("@district_id", obj.district_id));

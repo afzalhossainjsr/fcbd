@@ -16,8 +16,6 @@ namespace Model.Team
         public string? nick_name_bn { get; set; }
         public string? nick_name_en { get; set; }
         public string? date_of_birth { get; set; }
-        public string? height { get; set; }
-        public string? weight { get; set; }
         public string? mobile_number { get; set; }
         public string? email { get; set; }
         public string? registration_number { get; set; }
