@@ -137,6 +137,57 @@ tfoot {
             var pdfBytes = PdfGenerator.GeneratePdfA4(htmlContent);
             return File(pdfBytes, "application/pdf", "generated.pdf");
         }
+        [HttpGet]
+        [Route("GeneratePdfcustom")]
+        public IActionResult GeneratePdfcustom()
+        {
+            string htmlContent = @"
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Sample Table PDF</title>
+                    <style>
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                        }
+                        th, td {
+                            border: 1px solid black;
+                            padding: 8px;
+                            text-align: center;
+                        }
+                        tr.header-row {
+                            background-color: #f2f2f2;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Sample Table</h1>
+                    <table>
+                        <thead>
+                            <tr class='header-row'>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                                <th>Column 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1, Column 1</td>
+                                <td>Row 1, Column 2</td>
+                                <td>Row 1, Column 3</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </body>
+                </html>";
+
+            var pdfBytes = PdfGenerator.GeneratePdfCustom(htmlContent);
+            return File(pdfBytes, "application/pdf", "generated.pdf");
+        }
+       
+        
         [HttpGet("ExportExcel")] 
         public IActionResult ExportExcel()
         {

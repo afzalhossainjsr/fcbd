@@ -18,12 +18,10 @@ namespace Model.Team
         public string? date_of_birth { get; set; }
         public string? mobile_number { get; set; }
         public string? email { get; set; }
-        public string? registration_number { get; set; }
         public string? district_id { get; set; }
         public string? thana_id { get; set; }
         public string? player_position_id { get; set; }
         public string? jersey_number { get; set; }
-        public string? player_user_id { get; set; }
         public string? profile_image { get; set; }
         public string? profile_image_base64 { get; set; } 
         public string? gender_id { get; set; }

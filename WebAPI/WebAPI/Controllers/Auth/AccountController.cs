@@ -598,14 +598,12 @@ namespace WebAPI.Controllers.Auth
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult CheckLoginStatus()
         {
-            // Your logic to check login status
-            var isAuthenticated = _httpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
-            return Ok(new { status = isAuthenticated ? 1 : 0 });
+            var isAuthenticated = _httpContextAccessor?.HttpContext?.User?.Identity?.IsAuthenticated;
+            return Ok(new { status = isAuthenticated.HasValue && isAuthenticated.Value ? 1 : 0 });
         }
         [HttpGet("IsLoggedIn")]
         public bool IsLoggedIn()
         {
-            var UserName = User?.Identity?.Name;
             var isAuthenticated = HttpContext?.User?.Identity?.IsAuthenticated;
             return isAuthenticated.HasValue && isAuthenticated.Value;
         }

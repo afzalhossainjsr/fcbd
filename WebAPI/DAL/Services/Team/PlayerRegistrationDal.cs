@@ -57,9 +57,6 @@ namespace DAL.Services.Team
                              InActive = 3; 
         private async Task<ResultObject> SetData(int? SaveOption, string? userName, PlayerRegistrationModel obj)
         {
-               
-           
-                 
 
             List<SqlParameter> parameterList = new List<SqlParameter>();
             parameterList.Add(new SqlParameter("@save_option", SaveOption));
