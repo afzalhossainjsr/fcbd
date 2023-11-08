@@ -608,8 +608,45 @@ namespace WebAPI.Controllers.Auth
             return isAuthenticated.HasValue && isAuthenticated.Value;
         }
 
-
-
+        [HttpGet("GetUserInfo")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetUserInfo() 
+        {
+            var isAuthenticated = HttpContext?.User?.Identity?.IsAuthenticated;
+            if(isAuthenticated.HasValue && isAuthenticated.Value)
+            {
+                var userName = HttpContext?.User?.Identity?.Name;
+                var u = await userManager.FindByNameAsync(userName);
+                return Ok(new
+                {
+                    userinfo  = new { 
+                        UserFullName = u.first_name+ " " + u.last_name,
+                        UserName = u.UserName,
+                        MobileNumber = u.PhoneNumber,
+                        UserImage = u.user_image,
+                        Email= u.Email,
+                        IsLoggedIn = isAuthenticated
+                    },
+                    status = "200",
+                    message = "Loggedin User!"
+                });
+            }
+            return Ok(new
+            {
+                userinfo = new
+                {
+                    UserFullName = "",
+                    UserName = "",
+                    MobileNumber ="",
+                    UserImage = "",
+                    Email = "", 
+                    IsLoggedIn = isAuthenticated 
+                },
+                status = "201",
+                message = "No User Found!"
+            });
+        }
 
     }
 
