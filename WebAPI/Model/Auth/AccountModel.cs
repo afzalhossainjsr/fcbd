@@ -93,7 +93,7 @@ namespace Model.Auth
     }
     public class VerifyTokenModel
     {
-        public bool? SMSToken { get; set; }
+        public string? SMSToken { get; set; }
 
     }
     public class ResetPasswordModel
