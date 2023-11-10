@@ -46,7 +46,7 @@ namespace WebAPI.Controllers.Auth
         [Route("register-user")]
         public async Task<IActionResult> RegisterUser(RegisterModel model)
         {
-            var u = await userManager.FindByNameAsync(model.UserName);
+            var u = await userManager.FindByNameAsync(model.PhoneNumber);
 
             if (u != null)
                 return Ok(new Response { message = "User already exists!", status = "203" });
@@ -487,13 +487,13 @@ namespace WebAPI.Controllers.Auth
         public async Task<IActionResult> ForgotPassword(ForgotPasswordModel model)
         {
             OTPMessageResultModel messageResult = new OTPMessageResultModel() { message = "", statusCode = "" };
-            var user = await userManager.FindByNameAsync(model.UserName);
+            var user = await userManager.FindByNameAsync(model.MobileNumber);
             if (user == null)
             {
-                return Ok(new
+                return Ok(new Response
                 {
                     message = "User not found.",
-                    status = "201"
+                    status = "202"
                 });
             }
             var token = ReturnSMSToken();
@@ -501,7 +501,7 @@ namespace WebAPI.Controllers.Auth
             //Save Message To Database 
             var forgotPasswordObj = new ForgotPasswordToken()
             {
-                PhoneNumber = model.UserName,
+                PhoneNumber = model.MobileNumber,
                 PasswordToken = passwordtoken,
                 SMSToken = token
             };
@@ -513,24 +513,32 @@ namespace WebAPI.Controllers.Auth
             }
             else
             {
-                return Ok(new
+                return Ok(new Response
                 {
-                    Message = $"An Error Occured!",
-                    status = "201",
-                    Id = 0
+                    message = $"An Error Occured!",
+                    status = "203"
+                   
                 });
             }
             if (messageResult.statusCode == "200")
             {
-                return Ok(new
+                return Ok(new Response
                 {
-                    Message = $"We have sent an OTP to your phonenumber {user.PhoneNumber}!",
-                    status = "200",
-                    Id = (int.Parse(token) - 999)
+                    message = $"We have sent an OTP to your phonenumber {user.PhoneNumber}!",
+                    status = "200"
                 });
             }
-            return Ok(new { status = messageResult.statusCode, Message = "Message Sending Failed!", Id = 0 });
+            return Ok(new Response { status = messageResult.statusCode, message = "Message Sending Failed!" });
         }
+
+        [HttpPost]
+        [Route("GetVerifyToken")]
+        public async Task<IActionResult> GetVerifyToken(ResetPasswordModel resetPasswordModel)
+        {
+            var result = await _iUserRegisterDAL.GetVerifyToken(resetPasswordModel);
+            return new  JsonResult(result); 
+        }
+
         [HttpPost]
         [Route("ResetPassword")]
         public async Task<IActionResult> ResetPassword(ResetPasswordModel resetPasswordModel)
@@ -538,10 +546,10 @@ namespace WebAPI.Controllers.Auth
             var result = await _iUserRegisterDAL.GetForgotPasswordToken(resetPasswordModel);
             var user = await userManager.FindByNameAsync(result.PhoneNumber);
             if (user == null)
-                return Ok(new
+                return Ok(new OTPMessageResultModel 
                 {
                     message = "User not found.",
-                    status = "201"
+                    statusCode = "201" 
                 });
             var resetPassResult = await userManager.ResetPasswordAsync(user, result.PasswordToken, resetPasswordModel.Password);
             if (!resetPassResult.Succeeded)

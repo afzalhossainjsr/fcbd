@@ -91,6 +91,11 @@ namespace Model.Auth
         public string SMSToken { get; set; }
 
     }
+    public class VerifyTokenModel
+    {
+        public bool? SMSToken { get; set; }
+
+    }
     public class ResetPasswordModel
     {
         public string Password { get; set; }
@@ -134,8 +139,7 @@ namespace Model.Auth
     public class ForgotPasswordModel
     {
 
-        public string UserName { get; set; }
-        public string Url { get; set; }
+        public string MobileNumber { get; set; }
     }
     public class AspNetSocialUserVerificationToken 
     {

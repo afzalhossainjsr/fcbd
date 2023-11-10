@@ -13,6 +13,7 @@ namespace DAL.Repository.Auth
         Task<ForgotPasswordToken> GetForgotPasswordToken(ResetPasswordModel model);
         Task<AspNetSocialUserVerificationToken> GetSMSToken(SMSTokenModel obj);
         Task<AspNetUsersSocialUserReferenceViewModel> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel obj);
+        Task<VerifyTokenModel> GetVerifyToken(ResetPasswordModel model);
         Task<ResultObject> SaveForgotPasswordToken(ForgotPasswordToken obj);
         Task<OTPMessageResultModel> SendOTPMessage(string? phonenumber, string message);
     }

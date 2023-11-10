@@ -57,14 +57,34 @@ namespace DAL.Services.Auth
         }
         public async Task<ForgotPasswordToken> GetForgotPasswordToken(ResetPasswordModel model)
         {
+            ForgotPasswordToken obj = new ForgotPasswordToken();
             List<SqlParameter> parameterList = new List<SqlParameter>();
             parameterList.Add(new SqlParameter("@LoadOption", 2));
             parameterList.Add(new SqlParameter("@PhoneNumber", model.PhoneNumber));
             parameterList.Add(new SqlParameter("@Token", model.Token));
             SqlParameter[] parameters = parameterList.ToArray();
             var list = await _dataManager.ReturnListBySP<ForgotPasswordToken>("UserDB.dbo.spGetAspNetUserResetPasswordToken", parameters);
-            var data = list[0];
-            return data;
+            if (list.Count > 0)
+            {
+                obj = list[0];
+               
+            }
+             return obj; 
+        }
+        public async Task<VerifyTokenModel> GetVerifyToken(ResetPasswordModel model)  
+        {
+            VerifyTokenModel obj = new VerifyTokenModel();
+            List<SqlParameter> parameterList = new List<SqlParameter>();
+            parameterList.Add(new SqlParameter("@LoadOption", 3));
+            parameterList.Add(new SqlParameter("@PhoneNumber", model.PhoneNumber));
+            parameterList.Add(new SqlParameter("@Token", model.Token));
+            SqlParameter[] parameters = parameterList.ToArray();
+            var list = await _dataManager.ReturnListBySP<VerifyTokenModel>("UserDB.dbo.spGetAspNetUserResetPasswordToken", parameters);
+            if (list.Count > 0)
+            {
+                obj = list[0];
+            }
+            return obj;
         }
         public async Task<AspNetSocialUserVerificationToken> GetSMSToken(SMSTokenModel obj)
         {
