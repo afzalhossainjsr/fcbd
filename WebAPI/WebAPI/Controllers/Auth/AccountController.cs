@@ -46,6 +46,11 @@ namespace WebAPI.Controllers.Auth
         [Route("register-user")]
         public async Task<IActionResult> RegisterUser(RegisterModel model)
         {
+            var u = await userManager.FindByNameAsync(model.UserName);
+
+            if (u != null)
+                return Ok(new Response { message = "User already exists!", status = "203" });
+
             var user = new ApplicationUser
             {
                 Email = model.Email,
@@ -73,11 +78,9 @@ namespace WebAPI.Controllers.Auth
                     });
                 }
 
-                return Ok(new Response { status = "201", message = $"Error Status Code: {messageResult.statusCode}" });
+                return Ok(new Response { status = "201", message = $"Message sending failed: {messageResult.statusCode}" });
             }
-
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new Response { status = "201", message = "User creation failed! Please check user details and try again." });
+            return Ok( new Response { status = "202", message = "User creation failed! Please check user details and try again." });
         }
 
         [HttpPost]
@@ -105,7 +108,14 @@ namespace WebAPI.Controllers.Auth
 
                 return Ok(new
                 {
-                    userinfo,
+                    userinfo = new {
+                                    UserFullName = user.first_name + " " + user.last_name,
+                                    UserName = user.UserName,
+                                    MobileNumber = user.PhoneNumber,
+                                    UserImage = user.user_image,
+                                    Email = user.Email,
+                                    IsLoggedIn = true
+                                },
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo,
                     status = "200",
@@ -212,7 +222,15 @@ namespace WebAPI.Controllers.Auth
 
                 return Ok(new
                 {
-                    userinfo = new { UserName = user.UserName, Email = user.Email }, // Customize userinfo as needed
+
+                    userinfo = new {
+                        UserFullName = user.first_name + " " + user.last_name,
+                        UserName = user.UserName,
+                        MobileNumber = user.PhoneNumber,
+                        UserImage = user.user_image,
+                        Email = user.Email,
+                        IsLoggedIn = true 
+                    }, 
                     status = "200",
                     message = "Login Successfully!"
                 });
