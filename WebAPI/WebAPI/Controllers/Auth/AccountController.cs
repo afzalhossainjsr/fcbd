@@ -178,6 +178,7 @@ namespace WebAPI.Controllers.Auth
 
         //    return Ok(new { message = "Password does not match", status = "201" });
         //}
+
         [HttpPost]
         [Route("login-user2")]
         public async Task<IActionResult> LoginUser2(LoginModel model)
@@ -186,7 +187,24 @@ namespace WebAPI.Controllers.Auth
 
             if (user == null)
             {
-                return Ok(new Response { message = "User not exists!", status = "201" });
+                return Ok(new Response { message = "User not exists!", status = "404" });
+            }
+
+
+            if (!(user.PhoneNumberConfirmed))
+            {
+                var phoneNumberToken = await userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
+                var messageResult = await _iUserRegisterDAL.SendOTPMessage(user.PhoneNumber,
+                    "your  OTP code is:\n" + phoneNumberToken);
+                if (messageResult.statusCode == "200")
+                {
+                    return Ok(new Response
+                    {
+                        message = $"We have sent  verification code to your phone number {user.PhoneNumber}!",
+                        status = "200"
+                    });
+                }
+                return Ok(new Response { status = messageResult.statusCode,  message = $"Message sending failed" });
             }
 
             if (await userManager.CheckPasswordAsync(user, model.Password))
@@ -229,14 +247,15 @@ namespace WebAPI.Controllers.Auth
                         MobileNumber = user.PhoneNumber,
                         UserImage = user.user_image,
                         Email = user.Email,
-                        IsLoggedIn = true 
+                        IsLoggedIn = true ,
+                        PhoneNumberConfirmed = user.PhoneNumberConfirmed 
                     }, 
                     status = "200",
                     message = "Login Successfully!"
                 });
             }
 
-            return Ok(new { message = "Password does not match", status = "201" });
+            return Ok(new Response { message = "Password does not match", status = "401" });
         }
 
         [HttpPost]
@@ -396,13 +415,13 @@ namespace WebAPI.Controllers.Auth
             return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User Doesnot exist!" }); 
         }
 
-        [HttpGet("ConfirmPhoneNumber")]
-        public async Task<IActionResult> ConfirmPhonenumber(string token, string phoneNumber)
+        [HttpPost("ConfirmPhoneNumber")] 
+        public async Task<IActionResult> ConfirmPhonenumber(ConfirmPhoneNumberModel obj)
         {
-            var user = await userManager.FindByNameAsync(phoneNumber);
+            var user = await userManager.FindByNameAsync(obj.PhoneNumber);
             if (user != null)
             {
-                var result = await userManager.ChangePhoneNumberAsync(user, user.PhoneNumber, token);
+                var result = await userManager.ChangePhoneNumberAsync(user, user.PhoneNumber, obj.Token);
                 if (result.Succeeded)
                 {
                     return Ok(new
@@ -416,7 +435,7 @@ namespace WebAPI.Controllers.Auth
                     return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User OTP Failed!" });
                 }
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User Doesnot exist!" });
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "202", message = "This User Doesnot exist!" });
         }
 
         private JwtSecurityToken GetJWTToken(List<Claim> authClaims)  

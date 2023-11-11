@@ -102,6 +102,11 @@ namespace Model.Auth
         public string Token { get; set; }
         public string PhoneNumber { get; set; }
     }
+    public class ConfirmPhoneNumberModel
+    {
+        public string Token { get; set; }
+        public string PhoneNumber { get; set; }
+    }
     public class ChangePasswordModel
     {
         public string? OldPassword { get; set; }
