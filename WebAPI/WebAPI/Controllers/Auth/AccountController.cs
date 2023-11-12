@@ -61,7 +61,7 @@ namespace WebAPI.Controllers.Auth
                 first_name = model.first_name,
                 last_name = model.last_name,
                 PhoneNumber = model.PhoneNumber,
-                PhoneNumberConfirmed = true 
+                PhoneNumberConfirmed = false 
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
@@ -530,7 +530,7 @@ namespace WebAPI.Controllers.Auth
 
             if (int.Parse(saveResult?.ResultID) > 0)
             {
-                messageResult = await SendOTP(user.PhoneNumber, "Your Football Bangla code is:\n" + token);
+                messageResult = await SendOTP(user.PhoneNumber, "Your OTP code is:\n" + token);
             }
             else
             {
