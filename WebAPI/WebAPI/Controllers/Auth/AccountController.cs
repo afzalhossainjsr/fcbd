@@ -1,5 +1,6 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
 using DAL.Common;
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Model.Auth;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WebAPI.Auth;
 
@@ -58,7 +60,8 @@ namespace WebAPI.Controllers.Auth
                 UserName = model.PhoneNumber,
                 first_name = model.first_name,
                 last_name = model.last_name,
-                PhoneNumber = model.PhoneNumber
+                PhoneNumber = model.PhoneNumber,
+                PhoneNumberConfirmed = true 
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
@@ -66,8 +69,7 @@ namespace WebAPI.Controllers.Auth
             if (result.Succeeded)
             {
                 var phoneNumberToken = await userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
-                var messageResult = await _iUserRegisterDAL.SendOTPMessage(user.PhoneNumber,
-                    "Your Football Bangla verification code is:\n" + phoneNumberToken);
+                var messageResult = await SendOTP(user.PhoneNumber, "Your OTP code is:\n" + phoneNumberToken);
 
                 if (messageResult.statusCode == "200")
                 {
@@ -194,17 +196,17 @@ namespace WebAPI.Controllers.Auth
             if (!(user.PhoneNumberConfirmed))
             {
                 var phoneNumberToken = await userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
-                var messageResult = await _iUserRegisterDAL.SendOTPMessage(user.PhoneNumber,
+                var messageResult = await SendOTP(user.PhoneNumber,
                     "your  OTP code is:\n" + phoneNumberToken);
                 if (messageResult.statusCode == "200")
                 {
                     return Ok(new Response
                     {
                         message = $"We have sent  verification code to your phone number {user.PhoneNumber}!",
-                        status = "200"
+                        status = "300"
                     });
                 }
-                return Ok(new Response { status = messageResult.statusCode,  message = $"Message sending failed" });
+                return Ok(new Response { status = messageResult.statusCode,  message = $"Phone Number Not Confirmed! Message sending failed" });
             }
 
             if (await userManager.CheckPasswordAsync(user, model.Password))
@@ -528,7 +530,7 @@ namespace WebAPI.Controllers.Auth
 
             if (int.Parse(saveResult?.ResultID) > 0)
             {
-                messageResult = await _iUserRegisterDAL.SendOTPMessage(user.PhoneNumber, "Your Football Bangla code is:\n" + token);
+                messageResult = await SendOTP(user.PhoneNumber, "Your Football Bangla code is:\n" + token);
             }
             else
             {
@@ -691,6 +693,37 @@ namespace WebAPI.Controllers.Auth
                 status = "201",
                 message = "No User Found!"
             });
+        }
+
+        private async Task<OTPMessageResultModel> SendOTP(string phonenumber, string messageText)
+        {
+            OTPMessageResultModel objResult = new OTPMessageResultModel() { statusCode = "", message = "-1" };
+
+            var data = new   { phoneNumber = phonenumber,  message  = messageText };
+
+            try
+            {
+                var jsonPayload = JsonConvert.SerializeObject(data);
+                using (var client = new HttpClient())
+                {
+                    var apiUrl = @"https://userapi.looks.com.bd/api/UserProfile/SendSingleMessage"; // Replace with your API endpoint URL
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+                    var response = await client.PostAsync(apiUrl, content);
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<OTPMessageResultModel>(responseContent);
+                    if (result != null)
+                    {
+                        objResult = result;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return await Task.Run(() => objResult);
         }
 
     }
