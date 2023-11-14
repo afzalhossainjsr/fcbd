@@ -753,6 +753,42 @@ namespace WebAPI.Controllers.Auth
             }
             return new JsonResult(new { userinfo = new { }, status ="201", message = "user not found" });
         }
-    }
 
+
+        [HttpPost]
+        [Route("SaveUserProfile")]
+        public async Task<IActionResult> SaveUserProfile(UserPofileModel obj)  
+        {
+            var UserName = HttpContext.User?.Identity?.Name;
+            if (UserName != null)
+            {
+                var user = await userManager.FindByNameAsync(UserName);
+                if (user == null)
+                {
+                    return Ok(new Response
+                    {
+                        status = "204",
+                        message = "No User Found!"
+                    });
+                }
+
+                user.Email = obj.email;
+                user.date_of_birth = obj.date_of_birth;
+                user.first_name = obj.first_name;
+                user.last_name = obj.last_name;
+                user.gender_id = obj.gender_id;
+
+                var result = await userManager.UpdateAsync(user);
+                if (result.Succeeded)
+                {
+                    return Ok(new Response
+                    {
+                        status = "200",
+                        message = "Successfully updated profile!"
+                    });
+                }
+            }
+            return new JsonResult(new { userinfo = new { }, status = "201", message = "Update profile failed!" });
+        }
+    }
 }
