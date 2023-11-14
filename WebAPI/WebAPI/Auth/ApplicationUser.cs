@@ -16,6 +16,8 @@ namespace WebAPI.Auth
         public DateTime? created_at { get; set; }
         public DateTime? updated_at { get; set; }
         public string? user_image { get; set; }
+        public int? company_id { get; set; }
+        public string? employee_id { get; set; } 
         public ApplicationUser()
         {
             created_at = DateTime.Now; 

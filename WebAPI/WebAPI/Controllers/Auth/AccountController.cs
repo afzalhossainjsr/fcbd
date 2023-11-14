@@ -33,7 +33,7 @@ namespace WebAPI.Controllers.Auth
         private readonly IUserRegisterDAL _iUserRegisterDAL;
         private readonly IHttpContextAccessor _httpContextAccessor;
         public AccountController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager,
-          IConfiguration configuration, EmailConfiguration emailConfig, SignInManager<ApplicationUser> signInManager ,
+          IConfiguration configuration, EmailConfiguration emailConfig, SignInManager<ApplicationUser> signInManager,
            IUserRegisterDAL iUserRegisterDAL, IHttpContextAccessor httpContextAccessor)
         {
             this.userManager = userManager;
@@ -61,7 +61,7 @@ namespace WebAPI.Controllers.Auth
                 first_name = model.first_name,
                 last_name = model.last_name,
                 PhoneNumber = model.PhoneNumber,
-                PhoneNumberConfirmed = false 
+                PhoneNumberConfirmed = false
             };
 
             var result = await userManager.CreateAsync(user, model.Password);
@@ -82,12 +82,12 @@ namespace WebAPI.Controllers.Auth
 
                 return Ok(new Response { status = "201", message = $"Message sending failed: {messageResult.statusCode}" });
             }
-            return Ok( new Response { status = "202", message = "User creation failed! Please check user details and try again." });
+            return Ok(new Response { status = "202", message = "User creation failed! Please check user details and try again." });
         }
 
         [HttpPost]
         [Route("login-user")]
-        public async Task<IActionResult> LoginUser( LoginModel model)
+        public async Task<IActionResult> LoginUser(LoginModel model)
         {
             var user = await userManager.FindByNameAsync(model.UserName);
 
@@ -96,7 +96,7 @@ namespace WebAPI.Controllers.Auth
 
             if (await userManager.CheckPasswordAsync(user, model.Password))
             {
-                var userinfo = await userManager.FindByNameAsync(model.UserName);  
+                var userinfo = await userManager.FindByNameAsync(model.UserName);
                 var userRoles = await userManager.GetRolesAsync(user);
                 var authClaims = new List<Claim>
                 {
@@ -111,13 +111,13 @@ namespace WebAPI.Controllers.Auth
                 return Ok(new
                 {
                     userinfo = new {
-                                    UserFullName = user.first_name + " " + user.last_name,
-                                    UserName = user.UserName,
-                                    MobileNumber = user.PhoneNumber,
-                                    UserImage = user.user_image,
-                                    Email = user.Email,
-                                    IsLoggedIn = true
-                                },
+                        UserFullName = user.first_name + " " + user.last_name,
+                        UserName = user.UserName,
+                        MobileNumber = user.PhoneNumber,
+                        UserImage = user.user_image,
+                        Email = user.Email,
+                        IsLoggedIn = true
+                    },
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo,
                     status = "200",
@@ -206,7 +206,7 @@ namespace WebAPI.Controllers.Auth
                         status = "300"
                     });
                 }
-                return Ok(new Response { status = messageResult.statusCode,  message = $"Phone Number Not Confirmed! Message sending failed" });
+                return Ok(new Response { status = messageResult.statusCode, message = $"Phone Number Not Confirmed! Message sending failed" });
             }
 
             if (await userManager.CheckPasswordAsync(user, model.Password))
@@ -249,9 +249,9 @@ namespace WebAPI.Controllers.Auth
                         MobileNumber = user.PhoneNumber,
                         UserImage = user.user_image,
                         Email = user.Email,
-                        IsLoggedIn = true ,
-                        PhoneNumberConfirmed = user.PhoneNumberConfirmed 
-                    }, 
+                        IsLoggedIn = true,
+                        PhoneNumberConfirmed = user.PhoneNumberConfirmed
+                    },
                     status = "200",
                     message = "Login Successfully!"
                 });
@@ -267,7 +267,7 @@ namespace WebAPI.Controllers.Auth
             string userId = await GetUserIdAsync(model);
             if (string.IsNullOrEmpty(userId))
             {
-                return Ok(new 
+                return Ok(new
                 {
                     message = "User not found!",
                     status = "201",
@@ -281,7 +281,7 @@ namespace WebAPI.Controllers.Auth
             {
                 return Ok(new
                 {
-                    message = "Some Error Occured!", 
+                    message = "Some Error Occured!",
                     status = "201",
                     data = "no data"
                 });
@@ -317,7 +317,7 @@ namespace WebAPI.Controllers.Auth
                         last_name = model.LastName,
                         PhoneNumber = model.MobileNumber,
                         PhoneNumberConfirmed = true,
-                        EmailConfirmed = !string.IsNullOrEmpty(model.Email) && model.Email.Length > 5 
+                        EmailConfirmed = !string.IsNullOrEmpty(model.Email) && model.Email.Length > 5
                     };
 
                     var result_user = await userManager.CreateAsync(user, "123456");
@@ -360,7 +360,7 @@ namespace WebAPI.Controllers.Auth
             else if (model.Provider == "FACEBOOK")
             {
                 var fbidresult = GetFacebookUser(model.SocialUserId);
-                return fbidresult?.Id; 
+                return fbidresult?.Id;
             }
             return null;
         }
@@ -384,7 +384,7 @@ namespace WebAPI.Controllers.Auth
 
             var data = new
             {
-                userinfo = user, 
+                userinfo = user,
                 token = new JwtSecurityTokenHandler().WriteToken(token),
                 expiration = token.ValidTo,
                 status = "200",
@@ -402,7 +402,7 @@ namespace WebAPI.Controllers.Auth
                 var result = await userManager.ConfirmEmailAsync(user, token);
                 if (result.Succeeded)
                 {
-            
+
                     return Ok(new
                     {
                         status = "200",
@@ -411,13 +411,13 @@ namespace WebAPI.Controllers.Auth
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User OTP Failed!" }); 
+                    return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User OTP Failed!" });
                 }
             }
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User Doesnot exist!" }); 
+            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "201", message = "This User Doesnot exist!" });
         }
 
-        [HttpPost("ConfirmPhoneNumber")] 
+        [HttpPost("ConfirmPhoneNumber")]
         public async Task<IActionResult> ConfirmPhonenumber(ConfirmPhoneNumberModel obj)
         {
             var user = await userManager.FindByNameAsync(obj.PhoneNumber);
@@ -440,7 +440,7 @@ namespace WebAPI.Controllers.Auth
             return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "202", message = "This User Doesnot exist!" });
         }
 
-        private JwtSecurityToken GetJWTToken(List<Claim> authClaims)  
+        private JwtSecurityToken GetJWTToken(List<Claim> authClaims)
         {
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
 
@@ -454,8 +454,8 @@ namespace WebAPI.Controllers.Auth
 
             return token;
         }
-        
-        private string GetGoogleUserId(string? idToken)   
+
+        private string GetGoogleUserId(string? idToken)
         {
             try
             {
@@ -468,8 +468,8 @@ namespace WebAPI.Controllers.Auth
                 return "Exception Occured Ex:" + ex.Message.ToString();
             }
         }
-       
-        private FacebookUserInfo GetFacebookUser(string? _accessToken)  
+
+        private FacebookUserInfo GetFacebookUser(string? _accessToken)
         {
             FacebookUserInfo userinfo = new FacebookUserInfo();
             var client = new FacebookClient(_accessToken);
@@ -538,7 +538,7 @@ namespace WebAPI.Controllers.Auth
                 {
                     message = $"An Error Occured!",
                     status = "203"
-                   
+
                 });
             }
             if (messageResult.statusCode == "200")
@@ -557,7 +557,7 @@ namespace WebAPI.Controllers.Auth
         public async Task<IActionResult> GetVerifyToken(ResetPasswordModel resetPasswordModel)
         {
             var result = await _iUserRegisterDAL.GetVerifyToken(resetPasswordModel);
-            return new  JsonResult(result); 
+            return new JsonResult(result);
         }
 
         [HttpPost]
@@ -567,10 +567,10 @@ namespace WebAPI.Controllers.Auth
             var result = await _iUserRegisterDAL.GetForgotPasswordToken(resetPasswordModel);
             var user = await userManager.FindByNameAsync(result.PhoneNumber);
             if (user == null)
-                return Ok(new OTPMessageResultModel 
+                return Ok(new OTPMessageResultModel
                 {
                     message = "User not found.",
-                    statusCode = "201" 
+                    statusCode = "201"
                 });
             var resetPassResult = await userManager.ResetPasswordAsync(user, result.PasswordToken, resetPasswordModel.Password);
             if (!resetPassResult.Succeeded)
@@ -616,10 +616,10 @@ namespace WebAPI.Controllers.Auth
             AspNetSocialUserVerificationToken lst = new AspNetSocialUserVerificationToken();
             SMSTokenModel obj = new SMSTokenModel() { MobileNumber = MobileNumber, SMSToken = ReturnSMSToken() };
             var messageResult = await _iUserRegisterDAL.SendOTPMessage(MobileNumber,
-                "Your football Bangla OTP Code is:\n" + obj.SMSToken.ToString()); 
+                "Your football Bangla OTP Code is:\n" + obj.SMSToken.ToString());
             if (messageResult.statusCode == "200")
             {
-                lst = await _iUserRegisterDAL.GetSMSToken(obj); 
+                lst = await _iUserRegisterDAL.GetSMSToken(obj);
                 lst.SMSToken = (lst.SMSToken);
                 lst.SMSStatus = "200";
             }
@@ -636,7 +636,7 @@ namespace WebAPI.Controllers.Auth
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok("Success");
+            return new JsonResult("Success");
         }
 
 
@@ -726,6 +726,33 @@ namespace WebAPI.Controllers.Auth
             return await Task.Run(() => objResult);
         }
 
+        [HttpGet]
+        [Route("GetUserProfile")]
+        public async Task<IActionResult> GetUserProfile()
+        {
+            var UserName = HttpContext.User?.Identity?.Name;
+            if (UserName!=null)
+            {
+                var u = await userManager.FindByNameAsync(UserName);
+                var profile = new
+                {
+                    FirstName = u.first_name,
+                    LastName = u.last_name,
+                    Email = u.Email,
+                    DOB = u.date_of_birth,
+                    GenderId = u.gender_id,
+                    CompanyId = u.company_id,
+                    EmpId = u.employee_id 
+                };
+                return Ok(new
+                {
+                    userinfo = profile,
+                    status = "200",
+                    message = "No User Found!"
+                });
+            }
+            return new JsonResult(new { userinfo = new { }, status ="201", message = "user not found" });
+        }
     }
 
 }
