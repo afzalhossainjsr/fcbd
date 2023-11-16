@@ -742,7 +742,10 @@ namespace WebAPI.Controllers.Auth
                     DOB = u.date_of_birth,
                     GenderId = u.gender_id,
                     CompanyId = u.company_id,
-                    EmpId = u.employee_id 
+                    EmpId = u.employee_id ,
+                    UserImage = u.user_image,
+                    MobileNumber = u.PhoneNumber,
+
                 };
                 return Ok(new
                 {

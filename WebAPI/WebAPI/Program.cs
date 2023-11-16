@@ -2,9 +2,21 @@ using System.Text;
 using DAL.Common;
 using DAL.Repository.Auth;
 using DAL.Repository.Hubs;
+using DAL.Repository.Store;
+using DAL.Repository.Store.Menu;
+using DAL.Repository.Store.Product;
+using DAL.Repository.Store.ProductOrder;
+using DAL.Repository.Store.Reports;
+using DAL.Repository.Store.StockOrder;
 using DAL.Repository.Team;
 using DAL.Services.Auth;
 using DAL.Services.Hubs;
+using DAL.Services.Store;
+using DAL.Services.Store.Menu;
+using DAL.Services.Store.Product;
+using DAL.Services.Store.ProductOrder;
+using DAL.Services.Store.Reports;
+using DAL.Services.Store.StockOrder;
 using DAL.Services.Team;
 using DinkToPdf;
 using DinkToPdf.Contracts;
@@ -114,6 +126,18 @@ builder.Host.ConfigureServices(services =>
     services.AddScoped<IConnectedUserDAL, ConnectedUserDAL>();
     services.AddScoped<IUserRegisterDAL, UserRegisterDAL>();
     services.AddScoped<IPlayerRegistrationDal, PlayerRegistrationDal>();
+    services.AddScoped<IBasicDataDAL, BasicDataDAL>();
+    services.AddScoped<IStoreProductSupplierDAL, StoreProductSupplierDAL>();
+    services.AddScoped<IStoreProductDAL, StoreProductDAL>();
+    services.AddScoped<IWebProductViewDAL, WebProductViewDAL>();
+    services.AddScoped<IProductOrderDAL, ProductOrderDAL>();
+    services.AddScoped<IOrderProcessDAL, OrderProcessDAL>();
+    services.AddScoped<IStockOrderDAL, StockOrderDAL>();
+    services.AddScoped<IColorInfoDAL, ColorInfoDAL>();
+
+    services.AddScoped<IConnectedUserDAL, ConnectedUserDAL>();
+    services.AddScoped<IStoreReportDAL, StoreReportDAL>();
+    services.AddScoped<IMenuPermissionDAL, MenuPermissionDAL>();
 });
 
 //app configurations
