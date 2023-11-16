@@ -66,14 +66,12 @@ D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm\nati
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\sni.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\sni.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\WorkStation\WebAPI\WebAPI\obj\Release\net6.0\PubTmp\Out\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
