@@ -153,7 +153,7 @@ var app = builder.Build();
 app.UseRouting();
 
 app.UseCors(options =>
-  options.WithOrigins("http://localhost:4200", "http://localhost:4300", "http://103.222.21.142:2025")
+  options.WithOrigins("http://localhost:4200", "http://localhost:4300", "http://103.222.21.142:4300")
     .AllowAnyMethod()
     .AllowAnyHeader()
     .AllowCredentials()
