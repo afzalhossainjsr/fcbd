@@ -54,20 +54,56 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+//// For Identity  
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+//    .AddEntityFrameworkStores<ApplicationDbContext>()
+//    .AddDefaultTokenProviders();
+
+////Adding Authentication
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//})
+//           .AddJwtBearer(options =>
+//                   {
+//                       options.SaveToken = true;
+//                       options.RequireHttpsMetadata = false;
+//                       options.TokenValidationParameters = new TokenValidationParameters()
+//                       {
+//                           ValidateIssuer = true,
+//                           ValidateAudience = true,
+//                           ValidAudience = builder.Configuration["JWT:ValidAudience"],
+//                           ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+//                           IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+//                       };
+//                   }).AddCookie(options =>
+//                    {
+//                        options.Cookie.HttpOnly = true;
+//                        options.Cookie.SameSite = SameSiteMode.None;
+//                        options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Enable this in production with HTTPS
+//                        options.ExpireTimeSpan = TimeSpan.FromDays(30); // Set cookie expiration time
+//                        options.LoginPath = "/Account/Login"; // Specify the login path for UI
+//                        options.SlidingExpiration = true;
+//                    });
+
+
 // For Identity  
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-//Adding Authentication
+// Adding Authentication
 builder.Services.AddAuthentication(options =>
 {
- options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
- options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}) // Adding Jwt Bearer  
+            .AddJwtBearer(options =>
             {
                 options.SaveToken = true;
                 options.RequireHttpsMetadata = false;
@@ -79,16 +115,7 @@ options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationSche
                     ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
                 };
-            }).AddCookie(options =>
-            {
-                options.Cookie.HttpOnly = true;
-                options.Cookie.SameSite = SameSiteMode.None;
-                options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Enable this in production with HTTPS
-                options.ExpireTimeSpan = TimeSpan.FromDays(30); // Set cookie expiration time
-                options.LoginPath = "/Account/Login"; // Specify the login path for UI
-                options.SlidingExpiration = true;
             });
-
 
 //Auth Related Settings
 builder.Services.Configure<IdentityOptions>(options =>
@@ -113,6 +140,8 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.RequireUniqueEmail = false;
 });
 
+// Adding Authorization
+builder.Services.AddAuthorization();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

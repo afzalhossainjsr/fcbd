@@ -16,7 +16,7 @@ namespace DAL.Common
         private readonly EmailConfiguration _emailConfig;
         public DataManager(EmailConfiguration emailConfig)
         {
-            _myconn = new SqlConnection(GetConfiguration().GetSection("Data").GetSection("DefaultConnection").Value);
+            _myconn = new SqlConnection(GetConfiguration().GetSection("ConnectionStrings").GetSection("DefaultConnection").Value);
             _emailConfig = emailConfig;
         }
         private IConfigurationRoot GetConfiguration()

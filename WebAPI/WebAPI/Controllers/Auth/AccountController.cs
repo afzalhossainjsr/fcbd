@@ -98,13 +98,23 @@ namespace WebAPI.Controllers.Auth
             {
                 var userinfo = await userManager.FindByNameAsync(model.UserName);
                 var userRoles = await userManager.GetRolesAsync(user);
+                //var authClaims = new List<Claim>
+                //{
+                //    new Claim(ClaimTypes.Name, user.UserName),
+                //    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                //};
+
+                //authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
 
-                authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
+                foreach (var userRole in userRoles)
+                {
+                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                }
 
                 var token = GetJWTToken(authClaims);
 
@@ -118,7 +128,7 @@ namespace WebAPI.Controllers.Auth
                         Email = user.Email,
                         IsLoggedIn = true
                     },
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    JWTToken = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo,
                     status = "200",
                     message = "Login Successfully!"
@@ -221,39 +231,42 @@ namespace WebAPI.Controllers.Auth
 
                 authClaims.AddRange(userRoles.Select(userRole => new Claim(ClaimTypes.Role, userRole)));
 
-                // Create the identity for the user
-                var claimsIdentity = new ClaimsIdentity(
-                    authClaims,
-                    CookieAuthenticationDefaults.AuthenticationScheme);
+                //// Create the identity for the user
+                //var claimsIdentity = new ClaimsIdentity(
+                //    authClaims,
+                //    CookieAuthenticationDefaults.AuthenticationScheme);
 
-                // Create authentication properties for the persistent login session
-                var authProperties = new AuthenticationProperties
-                {
-                    AllowRefresh = true,
-                    IsPersistent = true, // Set to true for persistent login
-                    ExpiresUtc = DateTimeOffset.UtcNow.Add(TimeSpan.FromDays(30)) // Set cookie expiration time to 30 days
-                };
+                //// Create authentication properties for the persistent login session
+                //var authProperties = new AuthenticationProperties
+                //{
+                //    AllowRefresh = true,
+                //    IsPersistent = true, // Set to true for persistent login
+                //    ExpiresUtc = DateTimeOffset.UtcNow.Add(TimeSpan.FromDays(30)) // Set cookie expiration time to 30 days
+                //};
 
-                // Sign in the user with the created claims identity and auth properties
-                await HttpContext.SignInAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(claimsIdentity),
-                    authProperties);
+                //// Sign in the user with the created claims identity and auth properties
+                //await HttpContext.SignInAsync(
+                //    CookieAuthenticationDefaults.AuthenticationScheme,
+                //    new ClaimsPrincipal(claimsIdentity),
+                //    authProperties);
+
+                var JWTToken = GetJWTToken(authClaims);
 
                 return Ok(new
                 {
-
-                    userinfo = new {
+                        userinfo = new {
                         UserFullName = user.first_name + " " + user.last_name,
                         UserName = user.UserName,
                         MobileNumber = user.PhoneNumber,
                         UserImage = user.user_image,
                         Email = user.Email,
                         IsLoggedIn = true,
-                        PhoneNumberConfirmed = user.PhoneNumberConfirmed
-                    },
+                        PhoneNumberConfirmed = user.PhoneNumberConfirmed,
+                       
+                        },
                     status = "200",
-                    message = "Login Successfully!"
+                    message = "Login Successfully!",
+                    JWTToken = new JwtSecurityTokenHandler().WriteToken(JWTToken)
                 });
             }
 
@@ -451,7 +464,7 @@ namespace WebAPI.Controllers.Auth
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                 );
-
+           
             return token;
         }
 
@@ -656,13 +669,13 @@ namespace WebAPI.Controllers.Auth
         }
 
         [HttpGet("GetUserInfo")]
-        [AllowAnonymous]
-        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> GetUserInfo() 
         {
             var isAuthenticated = HttpContext?.User?.Identity?.IsAuthenticated;
-            if(isAuthenticated.HasValue && isAuthenticated.Value)
+            var UserName2 = User?.Identity?.Name;
+            if (isAuthenticated.HasValue && isAuthenticated.Value)
             {
+               
                 var userName = HttpContext?.User?.Identity?.Name;
                 var u = await userManager.FindByNameAsync(userName);
                 return Ok(new
