@@ -257,7 +257,7 @@ namespace WebAPI.Controllers.Auth
                 return Ok(new
                 {
                         userinfo = new {
-                        UserFullName = user.first_name + "-" + user.last_name,
+                        UserFullName = user.first_name + " " + user.last_name,
                             FirstName = user.first_name,
                             LastName = user.last_name,
                             UserName = user.UserName,
@@ -685,7 +685,7 @@ namespace WebAPI.Controllers.Auth
                 return Ok(new
                 {
                     userinfo  = new { 
-                        UserFullName = u.first_name+ "-" + u.last_name,
+                        UserFullName = u.first_name+ " " + u.last_name,
                         FirstName = u.first_name,
                         LastName = u.last_name,
                         UserName = u.UserName,
