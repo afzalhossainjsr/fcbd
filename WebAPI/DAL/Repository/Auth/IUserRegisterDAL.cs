@@ -15,6 +15,8 @@ namespace DAL.Repository.Auth
         Task<AspNetUsersSocialUserReferenceViewModel> GetSocialReferenceStatus(AspNetUsersSocialUserReferenceSearchModel obj);
         Task<VerifyTokenModel> GetVerifyToken(ResetPasswordModel model);
         Task<ResultObject> SaveForgotPasswordToken(ForgotPasswordToken obj);
+        Task<ResultObject> SaveUserAddress(string? UserName, UserAddressModel obj);
         Task<OTPMessageResultModel> SendOTPMessage(string? phonenumber, string message);
+        Task<ResultObject> UpdateUserAddress(string? UserName,UserAddressModel obj);
     }
 }

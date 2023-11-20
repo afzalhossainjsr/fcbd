@@ -171,4 +171,16 @@ namespace Model.Auth
 
 
     }
+    public class UserAddressModel
+    {
+        public int? Id { get; set; }
+        public int? DivisionId { get; set; } 
+        public int? DistrictId { get; set; }
+        public int? ThanaId { get; set; }
+        public string? Address { get; set; }
+        public string? Direction { get; set; } 
+        public double? Lat { get; set; }
+        public double? Lang { get; set; } 
+        
+    }
 }

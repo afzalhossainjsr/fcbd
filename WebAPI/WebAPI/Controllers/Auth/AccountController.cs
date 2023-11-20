@@ -122,8 +122,8 @@ namespace WebAPI.Controllers.Auth
                 {
                     userinfo = new {
                         UserFullName = user.first_name + " " + user.last_name,
-                        FirsrName = u.first_name,
-                        LastName = u.last_name,
+                        FirstName = user.first_name,
+                        LastName = user.last_name,
                         UserName = user.UserName,
                         MobileNumber = user.PhoneNumber,
                         UserImage = user.user_image,
@@ -258,7 +258,7 @@ namespace WebAPI.Controllers.Auth
                 {
                         userinfo = new {
                         UserFullName = user.first_name + "-" + user.last_name,
-                            FirsrName = user.first_name,
+                            FirstName = user.first_name,
                             LastName = user.last_name,
                             UserName = user.UserName,
                         MobileNumber = user.PhoneNumber,
@@ -686,7 +686,7 @@ namespace WebAPI.Controllers.Auth
                 {
                     userinfo  = new { 
                         UserFullName = u.first_name+ "-" + u.last_name,
-                        FirsrName =u.first_name,
+                        FirstName = u.first_name,
                         LastName = u.last_name,
                         UserName = u.UserName,
                         MobileNumber = u.PhoneNumber,
@@ -703,7 +703,7 @@ namespace WebAPI.Controllers.Auth
                 userinfo = new
                 {
                     UserFullName = "",
-                    FirsrName = "",
+                    FirstName = "",
                     LastName = "",
                     UserName = "",
                     MobileNumber ="",
@@ -814,5 +814,25 @@ namespace WebAPI.Controllers.Auth
             }
             return new JsonResult(new { userinfo = new { }, status = "201", message = "Update profile failed!" });
         }
+
+        [HttpPost]
+        [Route("SaveUserAddress")]
+        public async Task<IActionResult> SaveUserAddress(UserAddressModel obj) 
+        {
+            var UserName = HttpContext.User?.Identity?.Name;
+            var result = await _iUserRegisterDAL.SaveUserAddress(UserName,obj);
+            return new JsonResult(result);
+
+        }
+        [HttpPost]
+        [Route("UpdateUserAddress")]
+        public async Task<IActionResult> UpdateUserAddress(UserAddressModel obj) 
+        {
+            var UserName = HttpContext.User?.Identity?.Name;
+            var result = await _iUserRegisterDAL.UpdateUserAddress(UserName, obj);
+            return new JsonResult(result);
+
+        }
+
     }
 }

@@ -101,5 +101,36 @@ namespace DAL.Services.Auth
             }
             return (Info);
         }
+
+        private async Task<ResultObject> SetUserAddress(int? SaveOption, string? UserName, UserAddressModel obj) 
+        {
+            List<SqlParameter> parameterList = new List<SqlParameter>();
+            parameterList.Add(new SqlParameter("@SaveOption", SaveOption));
+            parameterList.Add(new SqlParameter("@UserName", UserName));
+            parameterList.Add(new SqlParameter("@Id", obj.Id));
+            parameterList.Add(new SqlParameter("@DivisionId", obj.DivisionId));
+            parameterList.Add(new SqlParameter("@DistrictId", obj.DistrictId));
+            parameterList.Add(new SqlParameter("@ThanaId", obj.ThanaId));
+            parameterList.Add(new SqlParameter("@Address", obj.Address));
+            parameterList.Add(new SqlParameter("@Direction", obj.Direction));
+            parameterList.Add(new SqlParameter("@Lat", obj.Lat));
+            parameterList.Add(new SqlParameter("@Lang", obj.Lang));
+            parameterList.Add(new SqlParameter("@IdentityValue", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
+            parameterList.Add(new SqlParameter("@ErrNo", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Default, null));
+            SqlParameter[] parameters = parameterList.ToArray();
+
+            var  objResult = await _dataManager.SaveDataBySP(@"UserDB.dbo.spSetUserAddress", parameters);
+            return (objResult);
+        }
+        public async Task<ResultObject> SaveUserAddress(string? UserName, UserAddressModel obj)
+        {
+            var result = await SetUserAddress(1, UserName, obj); 
+            return (result); 
+        }
+        public async Task<ResultObject> UpdateUserAddress(string? UserName, UserAddressModel obj)
+        {
+            var result = await SetUserAddress(2, UserName, obj); 
+            return (result);
+        }
     }
 }
