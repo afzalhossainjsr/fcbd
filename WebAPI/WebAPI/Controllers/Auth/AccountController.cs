@@ -122,6 +122,8 @@ namespace WebAPI.Controllers.Auth
                 {
                     userinfo = new {
                         UserFullName = user.first_name + " " + user.last_name,
+                        FirsrName = u.first_name,
+                        LastName = u.last_name,
                         UserName = user.UserName,
                         MobileNumber = user.PhoneNumber,
                         UserImage = user.user_image,
@@ -255,8 +257,10 @@ namespace WebAPI.Controllers.Auth
                 return Ok(new
                 {
                         userinfo = new {
-                        UserFullName = user.first_name + " " + user.last_name,
-                        UserName = user.UserName,
+                        UserFullName = user.first_name + "-" + user.last_name,
+                            FirsrName = user.first_name,
+                            LastName = user.last_name,
+                            UserName = user.UserName,
                         MobileNumber = user.PhoneNumber,
                         UserImage = user.user_image,
                         Email = user.Email,
@@ -681,7 +685,9 @@ namespace WebAPI.Controllers.Auth
                 return Ok(new
                 {
                     userinfo  = new { 
-                        UserFullName = u.first_name+ " " + u.last_name,
+                        UserFullName = u.first_name+ "-" + u.last_name,
+                        FirsrName =u.first_name,
+                        LastName = u.last_name,
                         UserName = u.UserName,
                         MobileNumber = u.PhoneNumber,
                         UserImage = u.user_image,
@@ -697,6 +703,8 @@ namespace WebAPI.Controllers.Auth
                 userinfo = new
                 {
                     UserFullName = "",
+                    FirsrName = "",
+                    LastName = "",
                     UserName = "",
                     MobileNumber ="",
                     UserImage = "",
