@@ -1,6 +1,7 @@
 using System.Text;
 using DAL.Common;
 using DAL.Repository.Auth;
+using DAL.Repository.Basic;
 using DAL.Repository.Hubs;
 using DAL.Repository.Store;
 using DAL.Repository.Store.Menu;
@@ -10,6 +11,7 @@ using DAL.Repository.Store.Reports;
 using DAL.Repository.Store.StockOrder;
 using DAL.Repository.Team;
 using DAL.Services.Auth;
+using DAL.Services.Basic;
 using DAL.Services.Hubs;
 using DAL.Services.Store;
 using DAL.Services.Store.Menu;
@@ -167,6 +169,7 @@ builder.Host.ConfigureServices(services =>
     services.AddScoped<IConnectedUserDAL, ConnectedUserDAL>();
     services.AddScoped<IStoreReportDAL, StoreReportDAL>();
     services.AddScoped<IMenuPermissionDAL, MenuPermissionDAL>();
+    services.AddScoped<ILocationDAL, LocationDAL>();
 });
 
 //app configurations

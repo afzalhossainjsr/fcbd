@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using DAL.Repository.Basic;
 using Facebook;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -15,7 +16,12 @@ namespace WebAPI.Controllers.Common
     [ApiController]
     public class BasicController : ControllerBase
     {
+        private readonly ILocationDAL _ILocationDAL;
+        public BasicController(ILocationDAL  _ILocationDAL)
+        {
+            this._ILocationDAL = _ILocationDAL;
 
+        }
 
         [HttpGet("GetData")]
         [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
@@ -202,6 +208,14 @@ tfoot {
             var secondTitle = "1 January, 2023";
             return ExcelGenerator.GenerateExcel01(table, title, secondTitle);
         }
-      
+
+        [HttpGet]
+        [Route("GetDivisionToThana")] 
+        public async Task<IActionResult> GetDivisionToThana()
+        {
+            var lst = await _ILocationDAL.GetDivisionToThana();
+            return new JsonResult(lst);
+        }
+
     }
 }
