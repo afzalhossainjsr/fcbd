@@ -132,5 +132,20 @@ namespace DAL.Services.Auth
             var result = await SetUserAddress(2, UserName, obj); 
             return (result);
         }
+        private async Task<List<Dictionary<string, string>>> GetUserData(int? LoadOption, string? UserName) 
+        {
+            List<SqlParameter> parameterList = new List<SqlParameter>();
+            parameterList.Add(new SqlParameter("@LoadOption", LoadOption));
+            parameterList.Add(new SqlParameter("@UserName", UserName));
+            SqlParameter[] parameters = parameterList.ToArray();
+            var list = await _dataManager.ReturnDictionaryListBySP("UserDB.dbo.spGetUserAddress", parameters);
+            return new(list);
+        }
+        public async Task<List<Dictionary<string, string>>> GetUserAddress(string? UserName) 
+        {
+            var list = await GetUserData(1, UserName);
+            return new(list);
+        }
+
     }
 }

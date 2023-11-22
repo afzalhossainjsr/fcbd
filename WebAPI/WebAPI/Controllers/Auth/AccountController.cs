@@ -833,6 +833,15 @@ namespace WebAPI.Controllers.Auth
             return new JsonResult(result);
 
         }
+        [HttpGet]
+        [Route("GetUserAddress")]
+        public async Task<IActionResult> GetUserAddress() 
+        {
+            var UserName = HttpContext.User?.Identity?.Name;
+            var result = await _iUserRegisterDAL.GetUserAddress(UserName);
+            return new JsonResult(result);
+
+        }
 
     }
 }
